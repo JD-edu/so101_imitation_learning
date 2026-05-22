@@ -38,7 +38,6 @@ def build_vocab(sentences):
 
 # [1단계] 한국어 문장들만 따로 모아둘 빈 바구니(리스트)를 만듭니다.
 korean_sentences = []
-
 # [2단계] 전체 data 리스트에서 (한국어, 영어) 쌍을 하나씩 꺼내며 반복합니다.
 for d in data:
     # d는 ("나 가고 싶어", "i want to go") 같은 튜플 형태입니다.
@@ -53,4 +52,96 @@ for d in data:
 #print(korean_sentences)
 # [4단계] 한국어 문장 목록만 담긴 바구니를 build_vocab 함수에 통째로 넘겨줍니다.
 ko_vocab = build_vocab(korean_sentences)
-print(ko_vocab)
+#print(ko_vocab)
+
+english_sentences = []
+for d in data:
+    en_sent = d[1]
+    english_sentences.append(en_sent)
+
+en_vocab = build_vocab(english_sentences)
+#print(en_vocab)
+
+en_idx2word = {}
+for k, v in en_vocab.items():
+    en_idx2word[v] = k
+#print(en_idx2word)
+
+# 2. 모델 정의 (인코더 & 디코더)
+class Encoder(nn.Module):
+    def __init__(self, input_dim, emb_dim, hid_dim):
+        super().__init__()
+        self.embedding = nn.Embedding(input_dim, emb_dim)
+        self.rnn = nn.LSTM(emb_dim, hid_dim, batch_first=True)
+
+    def forward(self, src):
+        _, (hidden, cell) = self.rnn(self.embedding(src))
+        return hidden, cell  # 이것이 바로 Context Vector!
+
+class Decoder(nn.Module):
+    def __init__(self, output_dim, emb_dim, hid_dim):
+        super().__init__()
+        self.embedding = nn.Embedding(output_dim, emb_dim)
+        self.rnn = nn.LSTM(emb_dim, hid_dim, batch_first=True)
+        self.fc_out = nn.Linear(hid_dim, output_dim)
+
+    def forward(self, input, hidden, cell):
+        input = input.unsqueeze(1) # [batch, 1]
+        output, (hidden, cell) = self.rnn(self.embedding(input), (hidden, cell))
+        prediction = self.fc_out(output.squeeze(1))
+        return prediction, hidden, cell
+    
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+#print(device)
+HID_DIM = 128 
+
+#print(len(ko_vocab))  # 14 
+#print(len(en_vocab))  # 19 
+enc = Encoder(len(ko_vocab), 64, HID_DIM).to(device)
+dec = Decoder(len(en_vocab), 64, HID_DIM).to(device)
+optimizer = optim.Adam(list(enc.parameters()) + list(dec.parameters()), lr=0.001)
+criterion = nn.CrossEntropyLoss(ignore_index=0)
+
+for epoch in range(1):
+    totla_loss = 0
+    for ko, en in data:
+        src = None
+        kor_token = []
+        for w in ko.split():
+            #print(w)
+            #print(ko_vocab[w])
+            kor_token.append(ko_vocab[w])
+        src = torch.tensor([kor_token])
+        src.to(device)
+        #print(src)
+        '''
+        이거
+        12
+        뭐야
+        13
+        tensor([[12, 13]])
+        '''
+        en_token = []
+        for w in en.split():
+            #print(w)
+            #print(en_vocab[w])
+            en_token.append(en_vocab[w])
+        trg = torch.tensor([en_token])
+        trg.to(device)
+        #print(trg)
+        '''
+        what
+        16
+        is
+        17
+        this
+        18
+        tensor([[16, 17, 18]])
+        '''
+        optimizer.zero_grad()
+        hidden, cell = enc(src) # 인코더가 Context Vector 생성
+        print(hidden)
+
+
+
+

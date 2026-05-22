@@ -61,6 +61,8 @@ for epoch in range(100):
     for ko, en in data:
         src = torch.tensor([[ko_vocab[w] for w in ko.split()]]).to(device)
         trg = torch.tensor([[en_vocab[w] for w in en.split()]]).to(device)
+        print(src)
+        print(trg)
         
         optimizer.zero_grad()
         hidden, cell = enc(src) # 인코더가 Context Vector 생성
