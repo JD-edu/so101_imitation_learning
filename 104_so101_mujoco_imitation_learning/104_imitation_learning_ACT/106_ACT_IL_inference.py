@@ -74,8 +74,10 @@ window = glfw.create_window(640, 480, "ACT MuJoCo Inference", None, None)
 glfw.make_context_current(window)
 scene = mj.MjvScene(mj_model, maxgeom=1000)
 cam = mj.MjvCamera()
-cam.lookat[:] = [0.3, 0, 0.2]
-cam.distance = 1.2
+cam.lookat[:] = [0.35, 0.0, 0.15] 
+cam.distance = 0.6
+cam.azimuth = 180
+cam.elevation = -30
 ctx = mj.MjrContext(mj_model, mj.mjtFontScale.mjFONTSCALE_150.value)
 
 # 리더 설정 (상태 입력을 위해 필요할 수 있음, 또는 시뮬레이터 qpos 사용)

@@ -43,8 +43,10 @@ cam = mj.MjvCamera()
 ctx = mj.MjrContext(model, mj.mjtFontScale.mjFONTSCALE_150.value)
 
 # 카메라 위치 (로봇과 탁자가 잘 보이게)
-cam.lookat[:] = [0.3, 0, 0.2]
-cam.distance = 0.5
+cam.lookat[:] = [0.35, 0.0, 0.05] 
+cam.distance = 0.65
+cam.azimuth = 180
+cam.elevation = -40
 
 # --- [3] 하드웨어(리더) 설정 ---
 LEADER_PORT = "/dev/ttyUSB0" 

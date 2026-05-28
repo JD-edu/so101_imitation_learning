@@ -14,9 +14,9 @@ data = [
 # 단어 사전 구축
 def build_vocab(sentences):
     vocab = {"<PAD>": 0, "<SOS>": 1, "<EOS>": 2, "<UNK>": 3}
-    for sent in sentences:
-        for word in sent.split():
-            if word not in vocab:
+    for sent in sentences:  # sent -> "claim now for free"
+        for word in sent.split():  # word -> [ 'claim', 'now', 'for', 'free']
+            if word not in vocab:  # 중복방지 
                 vocab[word] = len(vocab)
     return vocab
 

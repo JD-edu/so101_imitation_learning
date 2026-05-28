@@ -64,11 +64,12 @@ class MujocoTeleopRecorder:
         glfw.make_context_current(self.window)
         self.scene = mj.MjvScene(self.model, maxgeom=1000)
         self.cam = mj.MjvCamera()
-        self.cam.lookat[:] = [0.4, 0, 0.0]
-        self.cam.distance = 0.7
-        self.cam.azimuth = 135
-        self.cam.elevation = -60
+        self.cam.lookat[:] = [0.35, 0.0, 0.15] 
+        self.cam.distance = 0.6
+        self.cam.azimuth = 180
+        self.cam.elevation = -30
         self.ctx = mj.MjrContext(self.model, mj.mjtFontScale.mjFONTSCALE_150.value)
+
 
     def reset_block_position(self):
         """매 에피소드 시작 시 파란색 블록의 위치를 무작위로 변경"""
