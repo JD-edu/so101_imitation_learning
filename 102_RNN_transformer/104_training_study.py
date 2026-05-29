@@ -55,7 +55,7 @@ for d in data:
 #print(korean_sentences)
 # [4단계] 한국어 문장 목록만 담긴 바구니를 build_vocab 함수에 통째로 넘겨줍니다.
 ko_vocab = build_vocab(korean_sentences)
-#print(ko_vocab)
+#print(ko_vocab)  # {'<PAD>': 0, '<SOS>': 1, '<EOS>': 2, '<UNK>': 3, '나': 4, '가고': 5, '싶어': 6, '그거': 7, '좋아': 8, '행복해': 9, '너는': 10, '학생이야': 11, '이거': 12, '뭐야': 13}
 
 english_sentences = []
 for d in data:
@@ -166,7 +166,7 @@ for epoch in range(100):
 
         input_token = torch.tensor([1]).to(device) # <SOS> 시작
         loss = 0
-        print('='*50)
+        #print('='*50)
         # 디코더는 단어를 하나 받아서 그 다음 단어를 생각해 내는 것이 목적이라, 단어 단위로 루프를 돌게됨 
         # 이에 비해서 엔코더는 이미 문장이 확정되어 있어서 pytorch 내부에서 자체적으로 단아별 루프를 돌린다. 
         for t in range(trg.size(1)):  # size() 결과값은 ( 배치사이즈, 문장길이) 즉 문장의 단어숫자만큼 루프를 돌게됨 
