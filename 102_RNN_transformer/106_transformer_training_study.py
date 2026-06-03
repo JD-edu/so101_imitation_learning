@@ -54,7 +54,7 @@ class ChatbotVocab:
         
         # 5. 특수 토큰이 필요 없다면 숫자로 변환된 배열만 그대로 반환합니다.
         return encoded_indices
-        
+            
 
 df = pd.read_csv('ChatbotData.csv')
 #print(df)
