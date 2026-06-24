@@ -69,8 +69,8 @@ class Teleoperator:
 
 if __name__ == "__main__":
     teleop = Teleoperator(
-        leader_port="/dev/ttyUSB0",
-        follower_port="/dev/ttyUSB1",
+        leader_port="/dev/ttyACM0",
+        follower_port="/dev/ttyACM1",
         config_dir="./"
     )
     teleop.run()

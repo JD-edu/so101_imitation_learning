@@ -141,17 +141,32 @@ class TransformerChatbot(nn.Module):
         # d_model은 임베딩 벡터, vocal_size는 단어사전 softmax 같은 확률 크기로 정답을 표시 
         self.out = nn.Linear(d_model, vocab_size)
 
-    def forward(self, src, tgt): # 문장 X 배치사이즈가 입력 데이터
+    def forward(self, src, tgt): # 토큰화된문장 X 배치사이즈가 입력 데이터
+        '''
+        tensor([[    1,  9060,  9061,  7008,  1021,  6790,  9062,  9063,     2],
+        [    1,  6232,  4755,   848,     2,     0,     0,     0,     0],
+        ...
+        [    1,  5552,  5553,     2,     0,     0,     0,     0,     0]],
+        device='cuda:0')
+        '''
+        #print("forward: ", src)
         # 사람이 준 질문(src)과 답변(tgt)을 d_model 크기의 숫자 세계로 변환
         src_emb = self.embedding(src)
+        #  torch.Size([32, 9, 512]) 여기서 32 배치 9 문장길이 512 임베딩벡터 
+        #print("forward: ", src_emb.shape)
         tgt_emb = self.embedding(tgt)
+        #print("forward: ", tgt_emb.shape)
         
         # 트랜스포머 회사에 분석 요청하기
         # 인코더가 질문(src_emb)을 분석하고, 디코더가 답변(tgt_emb)을 참고해 연산합니다.
         output = self.transformer(src_emb, tgt_emb)  # output은 텐서 (batch size, 문장길이, 임베딩벡터차원)의 shape를 가짐  
-        
+        #print("forward: ",output.shape)  # torch.Size([32, 13, 512])
         # 최종 단어 번호표 형태로 출력
-        return self.out(output)
+        # 32 x 13 x 512 텐서를 받아서 -> (아마 flattening이 있고) -> 32 x 13 x vocab_size 출력 
+        # 이 vocab_size에는 모든 단어의 확률이 있고, 이 중에서 
+        final_out = self.out(output)
+        print("transformer forward:", final_out.shape)
+        return final_out
     
 # 학습 시작
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -169,8 +184,18 @@ for epoch in range(100):
     print("epoch start")
     for src, trg in loader:
         src, trg = src.to(device), trg.to(device)
+        # src: 배치사이즈 x 토큰텐서어레이  e.g. 
+        # src[0] -> tensor([   1, 9126,    2,    0,    0,    0,    0,    0,    0,    0,    0],device='cuda:0')
+        #print("src: ", src.shape, src[0])  # src.shape -> torch.Size([32, 9])
         optimizer.zero_grad() # 기록지 지우기 [cite: 1557]
+        # 트랜스포머에 입력하는 것은 다음 두가지 
+        # 토큰화된 입력 문장: src
+        # 토튼화된 출력 문장: trg
         output = model(src, trg[:, :-1]) # 문제 풀기 [cite: 1559]
+        print("transformer output ", output.shape)
+        # 트랜스포머는 이 두 입력을 어텐션 연산을 해서 출력을 내 놓는데 이것이 
+        # 배치사이즈 x vocab_size의 텐서 ... 이 하나의 vocab_size 텐서에는 각 단어의 확률이 들어 있음 
+        # 이 텐서를 flattening 한 후에 정래진 결과값 문장과 비교해서 accuracy 값을 얻는다 
         loss = criterion(output.reshape(-1, vocab.vocab_size), trg[:, 1:].reshape(-1)) # 채점 [cite: 1561]
         loss.backward() # 오답 분석 [cite: 1564]
         optimizer.step() # 수정 [cite: 1565]

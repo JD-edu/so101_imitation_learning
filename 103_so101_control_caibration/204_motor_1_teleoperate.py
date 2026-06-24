@@ -102,8 +102,8 @@ def teleop_motor1_shoulder_pan(
 
 if __name__ == "__main__":
     teleop_motor1_shoulder_pan(
-        leader_port="/dev/ttyUSB0",      # 리더 포트
-        follower_port="/dev/ttyUSB1",    # 팔로워 포트
+        leader_port="/dev/ttyACM0",      # 리더 포트
+        follower_port="/dev/ttyACM1",    # 팔로워 포트
         leader_json="shoulder_pan_calibration_leader.json",
         follower_json="shoulder_pan_calibration_follower.json",
         hz=50,

@@ -111,7 +111,7 @@ while True:
     # 사용자가 'q' 키를 누르면 루프를 탈출하고 종료합니다.
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-    print("test-1")
+    
 # 8. 자원 해제
 cap.release()
 cv2.destroyAllWindows()

@@ -60,7 +60,7 @@ class VisionTransformer(nn.Module):
         
     def forward(self, x):
         # x 차원 변화: [Batch, 3, 224, 224] (이미지 덩어리 진입)
-        
+        print("forward: ", x)
         # 1. 패치 임베딩 거치기 -> [Batch, 192, 14, 14]
         x = self.patch_embed(x) 
         
