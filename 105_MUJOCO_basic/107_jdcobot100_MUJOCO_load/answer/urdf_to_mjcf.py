@@ -13,6 +13,6 @@ try:
     model = mujoco.MjModel.from_xml_path(abs_path)
     
     mujoco.mj_saveLastXML("jdcobot200.xml", model)
-    print("Success! jdcobot200.xml 생성 완료")
+    print("Success! jdcobot100.xml 생성 완료")
 except Exception as e:
     print(f"Error: {e}")
