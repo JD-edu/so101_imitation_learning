@@ -32,7 +32,7 @@ val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False)
 
 # 2. 모델 생성 (ResNet18)
 model = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)
-#summary(model, input_size=(3, 224, 224))
+summary(model, input_size=(3, 224, 224))
 
 # 마지막 출력층 수정 (3개 클래스: can, cup, pet)
 num_ftrs = model.fc.in_features

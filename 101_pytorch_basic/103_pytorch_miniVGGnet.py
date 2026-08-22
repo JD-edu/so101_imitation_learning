@@ -53,7 +53,7 @@ class MiniVGGNet(nn.Module):
         return x
 
 if __name__ == '__main__':
-    IMG_SIZE, BATCH_SIZE, LEARNING_RATE, EPOCHS = 64, 32, 0.001, 30 # 에포크를 조금 더 늘림
+    IMG_SIZE, BATCH_SIZE, LEARNING_RATE, EPOCHS = 64, 32, 0.001, 100 # 에포크를 조금 더 늘림
     DATA_PATH = './images'
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

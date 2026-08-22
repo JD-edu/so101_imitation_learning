@@ -5,6 +5,7 @@ from torchvision import datasets, transforms, models
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import os
+from torchsummary import summary
 
 # 1. 환경 설정
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -42,6 +43,8 @@ else:
     num_ftrs = model.classifier[6].in_features
     model.classifier[6] = nn.Linear(num_ftrs, num_classes)
     model = model.to(device)
+
+    summary(model, (3, 224, 224))
 
     # 4. 손실함수 및 최적화 설정
     criterion = nn.CrossEntropyLoss()
