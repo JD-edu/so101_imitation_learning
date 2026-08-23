@@ -177,7 +177,7 @@ def run_glfw_simulation(mj_model, mj_data, model):
     cam.azimuth = 90.0
     cam.elevation = -25.0
     cam.distance = 1.2
-    cam.lookat = [0.0, 0.0, 0.2]
+    cam.lookat = [0.0, 0.0, 0.0]
 
     FIXED_POS1 = torch.tensor([-0.6, -0.4, 0.5, -0.3, 0.2, 0.01])
 
@@ -246,7 +246,8 @@ def main():
         return
 
     states, actions = generate_p2p_episodes(mj_model, mj_data)
-    print(f"[*] 총 생성된 (q(t) -> q(t+1)) 데이터 수: {len(states)} 개")
+    print(f"te[*] 총 생성된 (q(t) -> q(t+1)) 데이터 수: {len(states)} 개")
+    print(f"states[0]: {states[0]}")
 
     # (2) Train (80%) / Test (20%) 분할[cite: 3]
     split = int(len(states) * 0.8)
@@ -269,6 +270,8 @@ def main():
         for state, action in train_loader:
             state = state.to(device)
             action = action.to(device)
+            print(f"state.shape: {state.shape}")
+            print(f"state[0]: {state[0]} ")
 
             pred = model(state)
             loss = criterion(pred, action)

@@ -127,7 +127,7 @@ def main():
     cam.azimuth = 90.0
     cam.elevation = -25.0
     cam.distance = 1.2
-    cam.lookat = [0.0, 0.0, 0.2]
+    cam.lookat = [0.0, 0.0, 0.0]
 
     # 5. 훈련 시 사용하지 않은 새로운 시작 위치
     UNSEEN_START_POS = torch.tensor([-0.10, -0.80, 0.15, 0.20, -0.10, 0.000], dtype=torch.float32)

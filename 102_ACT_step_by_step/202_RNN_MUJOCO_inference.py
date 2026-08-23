@@ -67,7 +67,7 @@ def main():
     cam.azimuth = 90.0
     cam.elevation = -25.0
     cam.distance = 1.2
-    cam.lookat = [0.0, 0.0, 0.2]
+    cam.lookat = [0.0, 0.0, 0.0]
 
     # 3. [핵심] 훈련 세트와 의도적으로 다른 새로운 시작 위치 설정
     custom_start_pos = torch.tensor([-0.10, -0.80, 0.15, 0.20, -0.10, 0.000], dtype=torch.float32)
