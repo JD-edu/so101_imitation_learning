@@ -10,6 +10,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 import mujoco
+import numpy as np
 
 torch.manual_seed(42)
 
@@ -101,15 +102,24 @@ def generate_point_to_point_episodes(model, data):
 
 class P2PTrajectoryDataset(Dataset):
     def __init__(self, states, actions, history=HISTORY):
+        #print(f"states: {states.shape}")  # [80, 100, 6 ]
+        #print(f"actions: {actions.shape}")  # [80, 100, 6 ]
         xs, ys = [], []
-        for ep in range(states.shape[0]):
+        for ep in range(states.shape[0]):  # 80 turn for train data 
             ep_s, ep_a = states[ep], actions[ep]
-            for t in range(history - 1, len(ep_s) - 1):
-                xs.append(ep_s[t - history + 1 : t + 1])
+            #print(f"ep_s {ep_s.shape} ep_s length {len(ep_s)}")  # [100 , 6]
+            for t in range(history - 1, len(ep_s) - 1):  # from 9 to 99 
+                #print(f"ep_s from {t - history + 1} to {t+1}")
+                xs.append(ep_s[t - history + 1 : t + 1])  
+                #print(f"ep_a to {t+1}")
                 ys.append(ep_a[t + 1])
-
+        
+        #print(f"xs: {np.array(xs).shape}")  #  (7200, 10, 6)
+        #print(f"ys: {np.array(ys).shape}")  #  (7200, 6)
         self.x = torch.stack(xs)
         self.y = torch.stack(ys)
+        #print(f"self.x: {self.x.shape}")
+        #print(f"self.y: {self.y.shape}")
 
     def __len__(self):
         return len(self.x)
@@ -244,6 +254,8 @@ def main():
         model.train()
         total_loss = 0.0
         for seq, act in train_loader:
+            #print(f"seq: {seq.shape}")
+            #print(f"act: {act.shape}")
             seq, act = seq.to(device), act.to(device)
             pred = model(seq)
             loss = criterion(pred, act)

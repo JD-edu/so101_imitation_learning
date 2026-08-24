@@ -1,0 +1,6 @@
+Mon Aug 24 17:59:59 2026
+ERROR: mjv_updateCamera: fixed camera id is outside valid range
+
+Mon Aug 24 18:39:40 2026
+ERROR: mjv_updateCamera: fixed camera id is outside valid range
+

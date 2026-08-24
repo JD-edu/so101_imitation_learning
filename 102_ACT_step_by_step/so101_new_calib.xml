@@ -33,6 +33,8 @@
   </default>
   <worldbody>
     <!-- Link base -->
+    <!-- 전경 카메라 정의 추가 -->
+    <camera name="front_cam" pos="0.8 -0.8 0.8" xyaxes="1 1 0 -0.5 0.5 1"/>
     <body name="base" pos="0.0 0 0" quat="1 0 0 0" childclass="so101_new_calib">
       <inertial pos="0.0137179 -5.19711e-05 0.0334843" mass="0.147" fullinertia="0.000114686 0.000136117 0.000130364 -4.59787e-07 4.97151e-06 9.75275e-08"/>
       <!-- Part base_motor_holder_so101_v1 -->
