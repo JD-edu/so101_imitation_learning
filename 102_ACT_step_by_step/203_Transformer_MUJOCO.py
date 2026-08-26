@@ -75,6 +75,8 @@ def generate_point_to_point_episodes(model, data):
     for ep in range(NUM_EPISODES):
         pos1_noise = base_pos1 + (torch.rand(DOF) - 0.5) * 0.08
         pos2_noise = base_pos2 + (torch.rand(DOF) - 0.5) * 0.08
+        #print(f"pos1_noise {pos1_noise}")
+        #print(f"pos2_noise {pos2_noise}")
 
         mujoco.mj_resetData(model, data)
         data.qpos[:DOF] = pos1_noise.numpy()
@@ -144,8 +146,11 @@ class TransformerEncoderBC(nn.Module):
         self.head = nn.Linear(d_model, dof)
 
     def forward(self, state_seq):
+        #print(f"seq {state_seq.shape}")
         x = self.state_projector(state_seq) + self.pos_embedding
+        #print(f"x : {x.shape}")
         x = self.transformer_encoder(x)
+        #print(f"encoded X: {x.shape}")
         return self.head(x[:, -1])
 
 # --- GLFW 기반 실시간 Closed-Loop 시뮬레이션 ---
@@ -186,6 +191,7 @@ def run_glfw_eval(mj_model, mj_data, model):
         return [mj_data.qpos[:DOF].copy() for _ in range(HISTORY)]
 
     state_buffer = reset_robot()
+    print(f"state_buffer {state_buffer}")
     step_cnt = 0
 
     print("\n[*] GLFW 창에서 로봇 제어 동작이 실시간 렌더링됩니다 (창을 닫거나 ESC로 종료)...")
@@ -238,6 +244,8 @@ def main():
     mj_model = mujoco.MjModel.from_xml_path("./scene.xml")
     mj_data = mujoco.MjData(mj_model)
     states, actions = generate_point_to_point_episodes(mj_model, mj_data)
+    print(f"states: {states.shape}")
+    print(f"actions: {actions.shape}")
 
     train_ds = P2PTrajectoryDataset(states[:80], actions[:80])
     test_ds = P2PTrajectoryDataset(states[80:], actions[80:])
@@ -254,8 +262,8 @@ def main():
         model.train()
         total_loss = 0.0
         for seq, act in train_loader:
-            #print(f"seq: {seq.shape}")
-            #print(f"act: {act.shape}")
+            #print(f"seq: {seq.shape}")  # [64 10 6]
+            #print(f"act: {act.shape}")  # [64 6]
             seq, act = seq.to(device), act.to(device)
             pred = model(seq)
             loss = criterion(pred, act)

@@ -10,6 +10,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 import mujoco
+import numpy as np
 
 torch.manual_seed(42)
 
@@ -109,11 +110,14 @@ class ActionChunkDataset(Dataset):
             ep_s, ep_a = states[ep], actions[ep]
             # t 시점 기준 미래 chunk_size 개를 모두 가져올 수 있는 범위까지 슬라이딩
             last_t = len(ep_s) - chunk_size - 1
+            #print(f"last_t: {last_t}")  # 69
             for t in range(history - 1, last_t + 1):
                 # Input: t-history+1 ~ t 관절 상태 [History, DOF]
                 # Target Chunk: t+1 ~ t+chunk_size 미래 액션 시퀀스 [CHUNK_SIZE, DOF]
                 xs.append(ep_s[t - history + 1 : t + 1])
                 ys.append(ep_a[t + 1 : t + 1 + chunk_size])
+        #print(f"xs: {np.array(xs).shape}")  #  (7200, 10, 6)
+        #print(f"ys: {np.array(ys).shape}")  #  (7200, 6)
 
         self.x = torch.stack(xs)  # [Total_Samples, HISTORY, DOF]
         self.y = torch.stack(ys)  # [Total_Samples, CHUNK_SIZE, DOF]
@@ -131,8 +135,8 @@ class ActionChunkTransformer(nn.Module):
         self.chunk_size = chunk_size
         self.dof = dof
 
-        self.state_projector = nn.Linear(dof, d_model)
-        self.pos_embedding = nn.Parameter(torch.zeros(1, history, d_model))
+        self.state_projector = nn.Linear(dof, d_model)  # [b 10 6]  -> [b 10 64] 
+        self.pos_embedding = nn.Parameter(torch.zeros(1, history, d_model))   # [b 10 64] -> [b 10 64]
 
         encoder_layer = nn.TransformerEncoderLayer(
             d_model=d_model,
@@ -152,11 +156,16 @@ class ActionChunkTransformer(nn.Module):
 
     def forward(self, state_seq):
         # state_seq: [Batch, History, DOF]
+        print(f"seq {state_seq.shape}")  # [64 10 6]
         x = self.state_projector(state_seq) + self.pos_embedding
-        x = self.transformer_encoder(x)
+        print(f"x embedding + pos {x.shape}") # [64 10 6]
+        x = self.transformer_encoder(x) 
+        print(f"x encoded: {x.shape}") # [64 10 64]
         
-        context_last = x[:, -1]  # [Batch, d_model]
+        context_last = x[:, -1]  # [Batch, d_model] [64 64]
+        print(f"context_last {context_last.shape}")
         pred_flat = self.action_head(context_last)  # [Batch, CHUNK_SIZE * DOF]
+        print(f"pred_flat {pred_flat.shape}")  # [b 64 180]
         return pred_flat.view(-1, self.chunk_size, self.dof)  # [Batch, CHUNK_SIZE, DOF]
 
 # --- 4. GLFW 기반 실시간 Action Chunk 제어 평가 ---
@@ -255,6 +264,8 @@ def main():
     mj_model = mujoco.MjModel.from_xml_path('./scene.xml')
     mj_data = mujoco.MjData(mj_model)
     states, actions = generate_point_to_point_episodes(mj_model, mj_data)
+    print(f"states: {states.shape}")
+    print(f"actions: {actions.shape}")
 
     train_ds = ActionChunkDataset(states[:80], actions[:80])
     test_ds = ActionChunkDataset(states[80:], actions[80:])
@@ -273,8 +284,11 @@ def main():
         model.train()
         total_loss = 0.0
         for seq, chunk in train_loader:
+            #print(f"seq: {seq.shape}")  # [64 10 6]
+            #print(f"act: {chunk.shape}")  # [64 30 6]
             seq, chunk = seq.to(device), chunk.to(device)
-            pred = model(seq)
+            pred = model(seq) # [64 30, 6]
+            print(f"pred: {pred.shape}")
             loss = criterion(pred, chunk)
 
             optimizer.zero_grad()
