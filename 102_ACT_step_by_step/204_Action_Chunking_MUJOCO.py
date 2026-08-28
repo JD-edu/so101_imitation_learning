@@ -105,19 +105,20 @@ class ActionChunkDataset(Dataset):
     def __init__(self, states, actions, history=HISTORY, chunk_size=CHUNK_SIZE):
         xs, ys = [], []
         num_episodes = states.shape[0]
-
+        #print(f"states {states.shape}")  # [80 100 6]
+        #print(f"actions {actions.shape}")  # [20 100 6]
         for ep in range(num_episodes):
             ep_s, ep_a = states[ep], actions[ep]
             # t 시점 기준 미래 chunk_size 개를 모두 가져올 수 있는 범위까지 슬라이딩
             last_t = len(ep_s) - chunk_size - 1
             #print(f"last_t: {last_t}")  # 69
-            for t in range(history - 1, last_t + 1):
+            for t in range(history - 1, last_t + 1): # fro 9 ~ 70
                 # Input: t-history+1 ~ t 관절 상태 [History, DOF]
                 # Target Chunk: t+1 ~ t+chunk_size 미래 액션 시퀀스 [CHUNK_SIZE, DOF]
-                xs.append(ep_s[t - history + 1 : t + 1])
-                ys.append(ep_a[t + 1 : t + 1 + chunk_size])
-        #print(f"xs: {np.array(xs).shape}")  #  (7200, 10, 6)
-        #print(f"ys: {np.array(ys).shape}")  #  (7200, 6)
+                xs.append(ep_s[t - history + 1 : t + 1])  # from 0 ~ 70
+                ys.append(ep_a[t + 1 : t + 1 + chunk_size])  # from 11 ~ 100
+        #print(f"xs: {np.array(xs).shape}")  #  (4880, 10, 6)  4880 = 80 x 60 
+        #print(f"ys: {np.array(ys).shape}")  #  (4880, 30, 6)
 
         self.x = torch.stack(xs)  # [Total_Samples, HISTORY, DOF]
         self.y = torch.stack(ys)  # [Total_Samples, CHUNK_SIZE, DOF]
@@ -264,8 +265,8 @@ def main():
     mj_model = mujoco.MjModel.from_xml_path('./scene.xml')
     mj_data = mujoco.MjData(mj_model)
     states, actions = generate_point_to_point_episodes(mj_model, mj_data)
-    print(f"states: {states.shape}")
-    print(f"actions: {actions.shape}")
+    #print(f"states: {states.shape}")
+    #print(f"actions: {actions.shape}")
 
     train_ds = ActionChunkDataset(states[:80], actions[:80])
     test_ds = ActionChunkDataset(states[80:], actions[80:])
