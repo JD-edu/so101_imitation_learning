@@ -1,0 +1,362 @@
+[
+  {
+    "path": "04_06_mujoco_bc_to_act/visual_act_final.pt",
+    "sha256": "0c299d99bcb7d2356733ef7fb57f9c34f491f276f6b0fd11a7e1ae345e267744",
+    "size": 49439345,
+    "new_path": "06_mujoco_act/visual_act_final.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/201_MLP_MUJOCO.py",
+    "sha256": "d96a92fb5a889780ac1e45790c6e997de804543a99e619274c8e44f393fb135a",
+    "size": 10242,
+    "new_path": "05_mujoco_bc/201_MLP_MUJOCO.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/206_ACT_RH_TE_infer.py",
+    "sha256": "183fe0afe5c38f8d404d9255b7c1a5f02b174da261e87407214a2ee043a2dd0d",
+    "size": 10272,
+    "new_path": "06_mujoco_act/206_ACT_RH_TE_infer.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/cvae_act_goal_transformer.pt",
+    "sha256": "99d4cf842fb4981b27988d46e9e0fbeb94abf3471cde9dd3c735c88e41854a0d",
+    "size": 1176451,
+    "new_path": "06_mujoco_act/cvae_act_goal_transformer.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/201_MLP_MUJOCO_inference.py",
+    "sha256": "5738531e534c637535f5cd5ab436bef92920a001efa0ee0b0a5ba3e6ab32cb85",
+    "size": 6262,
+    "new_path": "05_mujoco_bc/201_MLP_MUJOCO_inference.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/action_chunking_transformer.pt",
+    "sha256": "6a0e11ecc7101f91b94b50c36d6cc343e0dce20a0a4d90f725b0232ee900be9b",
+    "size": 411306,
+    "new_path": "06_mujoco_act/action_chunking_transformer.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/207_ACT_CAVE.py",
+    "sha256": "1cf6d6e4c76ea08d7f96308a5d632787e142085c104c35c40d7e5fe4911baf55",
+    "size": 17150,
+    "new_path": "06_mujoco_act/207_ACT_CAVE.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/205_Action_Various_start_infer.py",
+    "sha256": "124bfa84619aaeaa05633d7f3295fd2c04699a99720889f4b47de01fdc7e6e02",
+    "size": 6937,
+    "new_path": "06_mujoco_act/205_Action_Various_start_infer.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/205_1_synthetic_data_distribution.png",
+    "sha256": "d82fb1f88dd23e22a8771c37cb2622a9be3e510779cb154262cbbf91edef87cb",
+    "size": 427873,
+    "new_path": "06_mujoco_act/205_1_synthetic_data_distribution.png"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/so101_new_calib.xml",
+    "sha256": "b6dc39ededea3f9dea2064a85b5f1a66b4f7eff72843b82780bc97a4b4efc655",
+    "size": 16266,
+    "new_path": "06_mujoco_act/so101_new_calib.xml"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/scene.xml",
+    "sha256": "1c8ae7660cfca926f1633bcb953a8628fed0b14c2dee9f16a4a8a464e8913909",
+    "size": 931,
+    "new_path": "06_mujoco_act/scene.xml"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/so101_mlp_bc_p2p.pt",
+    "sha256": "52ff1b07ee51c80d7f43afb50005f5fe82d66d1fd20257bb408864b2ada5c028",
+    "size": 75905,
+    "new_path": "05_mujoco_bc/so101_mlp_bc_p2p.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/206_ACT_RH_TE.py",
+    "sha256": "b5c2049415e04e8072dae471577edfe3f640197ce2227a1500f3aad271ca0970",
+    "size": 11862,
+    "new_path": "06_mujoco_act/206_ACT_RH_TE.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/205_1_Action_Various_start.py",
+    "sha256": "af315636686667dd4acff99e3efee3bac93eed9ffa5a8878b504b204ac08b9ab",
+    "size": 5544,
+    "new_path": "06_mujoco_act/205_1_Action_Various_start.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/203_Transformer_MUJOCO.py",
+    "sha256": "c97152b5ff16381d6006993e43186656e753774e10d73b39e6f2097e580bf3ea",
+    "size": 10024,
+    "new_path": "05_mujoco_bc/203_Transformer_MUJOCO.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/transformer_encoder_bc.pt",
+    "sha256": "ad026e2377a1a792a8a62891ef1c223e623ef396512238538d2890b9dfdf4c48",
+    "size": 285721,
+    "new_path": "05_mujoco_bc/transformer_encoder_bc.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/202_RNN_MUJOCO.py",
+    "sha256": "9be1c5839ea66ee3a6dd78e00209487ded95596d1d1e234cd1d3294e10fbf4cb",
+    "size": 8464,
+    "new_path": "05_mujoco_bc/202_RNN_MUJOCO.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/208_ACT_Image_infer.py",
+    "sha256": "123a59619a204955819e5c43bd2716b2332eb9ee0dbed440f36cc6dbc343f314",
+    "size": 9894,
+    "new_path": "06_mujoco_act/208_ACT_Image_infer.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/204_Action_Chunking_MUJOCO.py",
+    "sha256": "67bf7d8e1bc9c095ad57414b79ab88053a576dc1c0b510c9acd049fb0de4a28e",
+    "size": 11408,
+    "new_path": "06_mujoco_act/204_Action_Chunking_MUJOCO.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/202_RNN_MUJOCO_inference.py",
+    "sha256": "7b43ca374cd3b912de12a01ee7797f2f263136e0095e4e20a68427323664a680",
+    "size": 4674,
+    "new_path": "05_mujoco_bc/202_RNN_MUJOCO_inference.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/203_Transformer_MUJOCO_infer.py",
+    "sha256": "59c353ccfeba9de1d3f82a7d2e5b713cf36012ae974ef90b9221f60a97ca1571",
+    "size": 6141,
+    "new_path": "05_mujoco_bc/203_Transformer_MUJOCO_infer.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/208_ACT_Image.py",
+    "sha256": "7e1baebce35f908c24dfb7bf956a32984eb2ca60f9cf9c5f4a7830e4bf77f30d",
+    "size": 15481,
+    "new_path": "06_mujoco_act/208_ACT_Image.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/205_Action_Various_start.py",
+    "sha256": "23982ab14bbd249a2e1efb28708c2ad08bb5d200ed358e815a4db8c298080f95",
+    "size": 11882,
+    "new_path": "06_mujoco_act/205_Action_Various_start.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/207_ACT_CVAE_infer.py",
+    "sha256": "21d23846c5150c6f67bd9f1f831e52ffeaa1369d627356fda965bf0bdd24344a",
+    "size": 9754,
+    "new_path": "06_mujoco_act/207_ACT_CVAE_infer.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/cvae_act_transformer.pt",
+    "sha256": "023ef4f6bbceef431fe4e8355f10122d9bcbfaae731d6c6152695fe1e2e4e739",
+    "size": 1111913,
+    "new_path": "06_mujoco_act/cvae_act_transformer.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/so101_rnn_bc_p2p.pt",
+    "sha256": "203c213155b3fe2b5fde1c4519ddd5904480cb1102edaa866e479d55745f426b",
+    "size": 40267,
+    "new_path": "05_mujoco_bc/so101_rnn_bc_p2p.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/204_Action_Chunking_MUJOCO_infer.py",
+    "sha256": "5a4025d3adb7f9ccb362120545d8c5e55452b0c88e3e1f5bb7762684df771c41",
+    "size": 6503,
+    "new_path": "06_mujoco_act/204_Action_Chunking_MUJOCO_infer.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/action_chunking_transformer_multistart.pt",
+    "sha256": "86566f3995787f8eb8af1b47fe4865703756e327ced10c21eab28c294968de0d",
+    "size": 411265,
+    "new_path": "06_mujoco_act/action_chunking_transformer_multistart.pt"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/207_ACT_CAVE_ inter.py",
+    "sha256": "53cb3ed439b57673fb3fbc2b03adea62995c68605011b34b720a13eef58650cd",
+    "size": 253,
+    "new_path": "06_mujoco_act/207_ACT_CAVE_ inter.py"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/MUJOCO_LOG.TXT",
+    "sha256": "6a260723af4a7c1bc62de0fe4b2399561ebe760ba1d915b6358e46a4a825d344",
+    "size": 180,
+    "new_path": "06_mujoco_act/MUJOCO_LOG.TXT"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/__pycache__/205_Action_Various_start.cpython-312.pyc",
+    "sha256": "e9b9d66476fc22d0156f0410740a6cbc9381b3c074497d59aeb9533d5c74f49d",
+    "size": 18308,
+    "new_path": "06_mujoco_act/__pycache__/205_Action_Various_start.cpython-312.pyc"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/motor_holder_so101_wrist_v1.stl",
+    "sha256": "887f92e6013cb64ea3a1ab8675e92da1e0beacfd5e001f972523540545e08011",
+    "size": 1052184,
+    "new_path": "06_mujoco_act/meshes/motor_holder_so101_wrist_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/under_arm_so101_v1.part",
+    "sha256": "352adb8567f41a1fa517d0f0e8960749691a1d7079af73f15f1072c838c69709",
+    "size": 435,
+    "new_path": "06_mujoco_act/meshes/under_arm_so101_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/sts3215_03a_no_horn_v1.part",
+    "sha256": "fdb32d86e6127a8f7642dd82dac283a0e7d2b45d5df537d003daa642c15e0ffa",
+    "size": 439,
+    "new_path": "06_mujoco_act/meshes/sts3215_03a_no_horn_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/moving_jaw_so101_v1.part",
+    "sha256": "97f6cefdce9495f86924ffb57f00f2cad8f8d5381e14f1932d6a51d00df1081e",
+    "size": 436,
+    "new_path": "06_mujoco_act/meshes/moving_jaw_so101_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/wrist_roll_pitch_so101_v2.stl",
+    "sha256": "6c7ec5525b4d8b9e397a30ab4bb0037156a5d5f38a4adf2c7d943d6c56eda5ae",
+    "size": 2699784,
+    "new_path": "06_mujoco_act/meshes/wrist_roll_pitch_so101_v2.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/upper_arm_so101_v1.part",
+    "sha256": "63541673e4b9662974a8b148ea077a9067898a316d8c29aade06b20e22b05cb1",
+    "size": 435,
+    "new_path": "06_mujoco_act/meshes/upper_arm_so101_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/under_arm_so101_v1.stl",
+    "sha256": "d01d1f2de365651dcad9d6669e94ff87ff7652b5bb2d10752a66a456a86dbc71",
+    "size": 1975884,
+    "new_path": "06_mujoco_act/meshes/under_arm_so101_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/moving_jaw_so101_v1.stl",
+    "sha256": "785a9dded2f474bc1d869e0d3dae398a3dcd9c0c345640040472210d2861fa9d",
+    "size": 1413584,
+    "new_path": "06_mujoco_act/meshes/moving_jaw_so101_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/motor_holder_so101_wrist_v1.part",
+    "sha256": "4ee9c4242bb7dec967ae1555e934995b5fe2fb9373af6db4741301b73082d4d6",
+    "size": 444,
+    "new_path": "06_mujoco_act/meshes/motor_holder_so101_wrist_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/wrist_roll_follower_so101_v1.part",
+    "sha256": "93d674dfca5e566d1b033676f1fc50b4f0cc22e564a82ad7895f3dfd66b68848",
+    "size": 445,
+    "new_path": "06_mujoco_act/meshes/wrist_roll_follower_so101_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/sts3215_03a_no_horn_v1.stl",
+    "sha256": "75ef3781b752e4065891aea855e34dc161a38a549549cd0970cedd07eae6f887",
+    "size": 865884,
+    "new_path": "06_mujoco_act/meshes/sts3215_03a_no_horn_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/motor_holder_so101_base_v1.part",
+    "sha256": "1b4035c9fec35cd43ef5ecf74ad84827c45eed184b2194fe0a0f70ec42e464d7",
+    "size": 443,
+    "new_path": "06_mujoco_act/meshes/motor_holder_so101_base_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/sts3215_03a_v1.stl",
+    "sha256": "a37c871fb502483ab96c256baf457d36f2e97afc9205313d9c5ab275ef941cd0",
+    "size": 954084,
+    "new_path": "06_mujoco_act/meshes/sts3215_03a_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/wrist_roll_pitch_so101_v2.part",
+    "sha256": "e9ba6151922dfc8312a54c73ae19224c0b16b863595e0eba86081eaf676ed376",
+    "size": 442,
+    "new_path": "06_mujoco_act/meshes/wrist_roll_pitch_so101_v2.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/motor_holder_so101_base_v1.stl",
+    "sha256": "31242ae6fb59d8b15c66617b88ad8e9bded62d57c35d11c0c43a70d2f4caa95b",
+    "size": 1129384,
+    "new_path": "06_mujoco_act/meshes/motor_holder_so101_base_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2.stl",
+    "sha256": "e197e24005a07d01bbc06a8c42311664eaeda415bf859f68fa247884d0f1a6e9",
+    "size": 62784,
+    "new_path": "06_mujoco_act/meshes/waveshare_mounting_plate_so101_v2.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/rotation_pitch_so101_v1.stl",
+    "sha256": "9be900cc2a2bf718102841ef82ef8d2873842427648092c8ed2ca1e2ef4ffa34",
+    "size": 883684,
+    "new_path": "06_mujoco_act/meshes/rotation_pitch_so101_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/wrist_roll_follower_so101_v1.stl",
+    "sha256": "4b17b410a12d64ec39554abc3e8054d8a97384b2dc4a8d95a5ecb2a93670f5f4",
+    "size": 1439884,
+    "new_path": "06_mujoco_act/meshes/wrist_roll_follower_so101_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2.part",
+    "sha256": "4a616d2126b70d46a939460ead1bbaf235aa1775672b35dd3e210811e6aa7dfb",
+    "size": 450,
+    "new_path": "06_mujoco_act/meshes/waveshare_mounting_plate_so101_v2.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2 copy.stl",
+    "sha256": "5e9ffdd259d37181c752aebfcde6b732823e379135454ff2aee363ce19f4805e",
+    "size": 130,
+    "new_path": "06_mujoco_act/meshes/waveshare_mounting_plate_so101_v2 copy.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/base_so101_v2.stl",
+    "sha256": "bb12b7026575e1f70ccc7240051f9d943553bf34e5128537de6cd86fae33924d",
+    "size": 471584,
+    "new_path": "06_mujoco_act/meshes/base_so101_v2.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2 copy.part",
+    "sha256": "af62448feb9fd917f0e6a876e77eb698ef5752ac59385f33a6a1a0107cc471e6",
+    "size": 128,
+    "new_path": "06_mujoco_act/meshes/waveshare_mounting_plate_so101_v2 copy.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/base_motor_holder_so101_v1.part",
+    "sha256": "3fc04275864139676a50041a322caf8807a063c0d6e73e7f74aa136eb8368df9",
+    "size": 443,
+    "new_path": "06_mujoco_act/meshes/base_motor_holder_so101_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/base_so101_v2.part",
+    "sha256": "6c611cca00540c8f1aef67b1caba15e6674d5a1380eb51aa9c9216c6bfda37ac",
+    "size": 430,
+    "new_path": "06_mujoco_act/meshes/base_so101_v2.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/base_motor_holder_so101_v1.stl",
+    "sha256": "8cd2f241037ea377af1191fffe0dd9d9006beea6dcc48543660ed41647072424",
+    "size": 1877084,
+    "new_path": "06_mujoco_act/meshes/base_motor_holder_so101_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/sts3215_03a_v1.part",
+    "sha256": "82eed501939906901c5bab37f01ba428bcab39856d244f9bd6fe07f441ceb0e0",
+    "size": 431,
+    "new_path": "06_mujoco_act/meshes/sts3215_03a_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/rotation_pitch_so101_v1.part",
+    "sha256": "0b7b24211a542555168d0a415ff4f05e6a4a9803045e8e31ffe1984fc3135e91",
+    "size": 440,
+    "new_path": "06_mujoco_act/meshes/rotation_pitch_so101_v1.part"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/meshes/upper_arm_so101_v1.stl",
+    "sha256": "475056e03a17e71919b82fd88ab9a0b898ab50164f2a7943652a6b2941bb2d4f",
+    "size": 1303484,
+    "new_path": "06_mujoco_act/meshes/upper_arm_so101_v1.stl"
+  },
+  {
+    "path": "04_06_mujoco_bc_to_act/.vscode/settings.json",
+    "sha256": "fb68765dabb197cac60376c803ac61894961b835ca8760705eb89a09e2177551",
+    "size": 132,
+    "new_path": "06_mujoco_act/.vscode/settings.json"
+  }
+]

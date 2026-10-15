@@ -1,0 +1,12 @@
+usage: cli.py train [-h] [--dataset-root DATASET_ROOT] [--repo-id REPO_ID]
+                    [--output OUTPUT] [--steps STEPS]
+                    [--batch-size BATCH_SIZE] [--device DEVICE]
+
+options:
+  -h, --help            show this help message and exit
+  --dataset-root DATASET_ROOT
+  --repo-id REPO_ID
+  --output OUTPUT
+  --steps STEPS
+  --batch-size BATCH_SIZE
+  --device DEVICE

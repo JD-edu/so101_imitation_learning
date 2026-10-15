@@ -1,0 +1,389 @@
+{
+  "environment": {
+    "python": "3.10.12",
+    "mujoco": "3.10.0",
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "numpy": "2.2.6",
+    "device": "CPU",
+    "rendering": "EGL"
+  },
+  "command": "MUJOCO_GL=egl PYTHONDONTWRITEBYTECODE=1 /home/robo/anaconda3/envs/lerobot/bin/python -m unittest discover -s tests -p test_mujoco_bc_to_act.py -v",
+  "tests_run": 11,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "elapsed_seconds": 12.064,
+  "python_files_parsed": 18,
+  "preserved_book_sections": {
+    "chapter4": true,
+    "chapters7_10": true
+  },
+  "assets_preserved": 41,
+  "checkpoints_preserved": 8,
+  "source_changes": [
+    {
+      "path": "103_mujoco_bc_to_act/201_MLP_MUJOCO.py",
+      "before_sha256": "ff8ffd0e6c887c15ce37cc7be7dff69d02133912568602193c9f032d456123fd",
+      "after_sha256": "d96a92fb5a889780ac1e45790c6e997de804543a99e619274c8e44f393fb135a",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/201_MLP_MUJOCO_inference.py",
+      "before_sha256": "a7eb0bbf1b5d2e1828f9338b3c0a601f26123938b13ae2324c5642bbfa0bc423",
+      "after_sha256": "5738531e534c637535f5cd5ab436bef92920a001efa0ee0b0a5ba3e6ab32cb85",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/202_RNN_MUJOCO.py",
+      "before_sha256": "736080c355f6dc4c0b44f7ccff66f06d9af3fb5bf108f0c3c15951126cce0395",
+      "after_sha256": "9be1c5839ea66ee3a6dd78e00209487ded95596d1d1e234cd1d3294e10fbf4cb",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/202_RNN_MUJOCO_inference.py",
+      "before_sha256": "3c8d5ff8b019527a5f894a0e6e1b52cf195336fd11679dd5c226eb8026f4f05f",
+      "after_sha256": "7b43ca374cd3b912de12a01ee7797f2f263136e0095e4e20a68427323664a680",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/203_Transformer_MUJOCO.py",
+      "before_sha256": "4f011f87d29f9f832576ca30a0a75539f4119654802fcb148ce34537e93bd2d8",
+      "after_sha256": "c97152b5ff16381d6006993e43186656e753774e10d73b39e6f2097e580bf3ea",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/203_Transformer_MUJOCO_infer.py",
+      "before_sha256": "2be2ba7c924d8488f829ccfe194e499392cbf0119dd05975bacd08593f4a129a",
+      "after_sha256": "59c353ccfeba9de1d3f82a7d2e5b713cf36012ae974ef90b9221f60a97ca1571",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/204_Action_Chunking_MUJOCO.py",
+      "before_sha256": "5fa973fc1cd0f42577ff69af4eb1aaa6575cffc08fcbe21169c63d3b81951c42",
+      "after_sha256": "67bf7d8e1bc9c095ad57414b79ab88053a576dc1c0b510c9acd049fb0de4a28e",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/204_Action_Chunking_MUJOCO_infer.py",
+      "before_sha256": "8d5d4ed3fc78a1fe3ffd3e36b868a5b4bc23db358dddad037d3ce762bb00d8bd",
+      "after_sha256": "5a4025d3adb7f9ccb362120545d8c5e55452b0c88e3e1f5bb7762684df771c41",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/205_1_Action_Various_start.py",
+      "before_sha256": "af315636686667dd4acff99e3efee3bac93eed9ffa5a8878b504b204ac08b9ab",
+      "after_sha256": "af315636686667dd4acff99e3efee3bac93eed9ffa5a8878b504b204ac08b9ab",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/205_Action_Various_start.py",
+      "before_sha256": "f2d8b8f8c26f0764f88969b07e8ac8e720f40b04c48cd0f10ad32ad0608e4b1c",
+      "after_sha256": "23982ab14bbd249a2e1efb28708c2ad08bb5d200ed358e815a4db8c298080f95",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/205_Action_Various_start_infer.py",
+      "before_sha256": "4bc29707a7c7d57d62bccbe9c21ed20dd2bd22cf57edd66ba64187f804d88da7",
+      "after_sha256": "124bfa84619aaeaa05633d7f3295fd2c04699a99720889f4b47de01fdc7e6e02",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/206_ACT_RH_TE.py",
+      "before_sha256": "8a5786b572ce85c09dd42d8bc2b25ef4a04079593bcd9b20184f716b49563e98",
+      "after_sha256": "b5c2049415e04e8072dae471577edfe3f640197ce2227a1500f3aad271ca0970",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/206_ACT_RH_TE_infer.py",
+      "before_sha256": "d14c2b6769dc5302a893ea63a28417d8b656221019d94d1f2b791223f9acd72b",
+      "after_sha256": "183fe0afe5c38f8d404d9255b7c1a5f02b174da261e87407214a2ee043a2dd0d",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/207_ACT_CAVE.py",
+      "before_sha256": "a3ef2d0a553d37d77247a6e62b38b5ed19e3689651be7ab132cc9529a46046d1",
+      "after_sha256": "1cf6d6e4c76ea08d7f96308a5d632787e142085c104c35c40d7e5fe4911baf55",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/207_ACT_CAVE_ inter.py",
+      "before_sha256": "b4fc080ec5f9fd0898332e4ae5745041bcbdb7ebd30e579ab339985fd1e8980b",
+      "after_sha256": "53cb3ed439b57673fb3fbc2b03adea62995c68605011b34b720a13eef58650cd",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/208_ACT_Image.py",
+      "before_sha256": "eb6085afccd1f1724837fe22f292944c9f5ee221098d879b417124bf7ca9f5da",
+      "after_sha256": "7e1baebce35f908c24dfb7bf956a32984eb2ca60f9cf9c5f4a7830e4bf77f30d",
+      "unchanged": false
+    },
+    {
+      "path": "103_mujoco_bc_to_act/208_ACT_Image_infer.py",
+      "before_sha256": "754d9fcf1adb32ade4d154232ff651fa19e5ae724cae8ddfc81c209573f398d9",
+      "after_sha256": "123a59619a204955819e5c43bd2716b2332eb9ee0dbed440f36cc6dbc343f314",
+      "unchanged": false
+    }
+  ],
+  "new_source_files": [
+    {
+      "path": "103_mujoco_bc_to_act/207_ACT_CVAE_infer.py",
+      "sha256": "21d23846c5150c6f67bd9f1f831e52ffeaa1369d627356fda965bf0bdd24344a"
+    }
+  ],
+  "assets": [
+    {
+      "path": "103_mujoco_bc_to_act/.vscode/settings.json",
+      "before_sha256": "fb68765dabb197cac60376c803ac61894961b835ca8760705eb89a09e2177551",
+      "after_sha256": "fb68765dabb197cac60376c803ac61894961b835ca8760705eb89a09e2177551",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/205_1_synthetic_data_distribution.png",
+      "before_sha256": "d82fb1f88dd23e22a8771c37cb2622a9be3e510779cb154262cbbf91edef87cb",
+      "after_sha256": "d82fb1f88dd23e22a8771c37cb2622a9be3e510779cb154262cbbf91edef87cb",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/MUJOCO_LOG.TXT",
+      "before_sha256": "6a260723af4a7c1bc62de0fe4b2399561ebe760ba1d915b6358e46a4a825d344",
+      "after_sha256": "6a260723af4a7c1bc62de0fe4b2399561ebe760ba1d915b6358e46a4a825d344",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/action_chunking_transformer.pt",
+      "before_sha256": "6a0e11ecc7101f91b94b50c36d6cc343e0dce20a0a4d90f725b0232ee900be9b",
+      "after_sha256": "6a0e11ecc7101f91b94b50c36d6cc343e0dce20a0a4d90f725b0232ee900be9b",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/action_chunking_transformer_multistart.pt",
+      "before_sha256": "86566f3995787f8eb8af1b47fe4865703756e327ced10c21eab28c294968de0d",
+      "after_sha256": "86566f3995787f8eb8af1b47fe4865703756e327ced10c21eab28c294968de0d",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/cvae_act_goal_transformer.pt",
+      "before_sha256": "99d4cf842fb4981b27988d46e9e0fbeb94abf3471cde9dd3c735c88e41854a0d",
+      "after_sha256": "99d4cf842fb4981b27988d46e9e0fbeb94abf3471cde9dd3c735c88e41854a0d",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/cvae_act_transformer.pt",
+      "before_sha256": "023ef4f6bbceef431fe4e8355f10122d9bcbfaae731d6c6152695fe1e2e4e739",
+      "after_sha256": "023ef4f6bbceef431fe4e8355f10122d9bcbfaae731d6c6152695fe1e2e4e739",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/base_motor_holder_so101_v1.part",
+      "before_sha256": "3fc04275864139676a50041a322caf8807a063c0d6e73e7f74aa136eb8368df9",
+      "after_sha256": "3fc04275864139676a50041a322caf8807a063c0d6e73e7f74aa136eb8368df9",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/base_motor_holder_so101_v1.stl",
+      "before_sha256": "8cd2f241037ea377af1191fffe0dd9d9006beea6dcc48543660ed41647072424",
+      "after_sha256": "8cd2f241037ea377af1191fffe0dd9d9006beea6dcc48543660ed41647072424",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/base_so101_v2.part",
+      "before_sha256": "6c611cca00540c8f1aef67b1caba15e6674d5a1380eb51aa9c9216c6bfda37ac",
+      "after_sha256": "6c611cca00540c8f1aef67b1caba15e6674d5a1380eb51aa9c9216c6bfda37ac",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/base_so101_v2.stl",
+      "before_sha256": "bb12b7026575e1f70ccc7240051f9d943553bf34e5128537de6cd86fae33924d",
+      "after_sha256": "bb12b7026575e1f70ccc7240051f9d943553bf34e5128537de6cd86fae33924d",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/motor_holder_so101_base_v1.part",
+      "before_sha256": "1b4035c9fec35cd43ef5ecf74ad84827c45eed184b2194fe0a0f70ec42e464d7",
+      "after_sha256": "1b4035c9fec35cd43ef5ecf74ad84827c45eed184b2194fe0a0f70ec42e464d7",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/motor_holder_so101_base_v1.stl",
+      "before_sha256": "31242ae6fb59d8b15c66617b88ad8e9bded62d57c35d11c0c43a70d2f4caa95b",
+      "after_sha256": "31242ae6fb59d8b15c66617b88ad8e9bded62d57c35d11c0c43a70d2f4caa95b",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/motor_holder_so101_wrist_v1.part",
+      "before_sha256": "4ee9c4242bb7dec967ae1555e934995b5fe2fb9373af6db4741301b73082d4d6",
+      "after_sha256": "4ee9c4242bb7dec967ae1555e934995b5fe2fb9373af6db4741301b73082d4d6",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/motor_holder_so101_wrist_v1.stl",
+      "before_sha256": "887f92e6013cb64ea3a1ab8675e92da1e0beacfd5e001f972523540545e08011",
+      "after_sha256": "887f92e6013cb64ea3a1ab8675e92da1e0beacfd5e001f972523540545e08011",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/moving_jaw_so101_v1.part",
+      "before_sha256": "97f6cefdce9495f86924ffb57f00f2cad8f8d5381e14f1932d6a51d00df1081e",
+      "after_sha256": "97f6cefdce9495f86924ffb57f00f2cad8f8d5381e14f1932d6a51d00df1081e",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/moving_jaw_so101_v1.stl",
+      "before_sha256": "785a9dded2f474bc1d869e0d3dae398a3dcd9c0c345640040472210d2861fa9d",
+      "after_sha256": "785a9dded2f474bc1d869e0d3dae398a3dcd9c0c345640040472210d2861fa9d",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/rotation_pitch_so101_v1.part",
+      "before_sha256": "0b7b24211a542555168d0a415ff4f05e6a4a9803045e8e31ffe1984fc3135e91",
+      "after_sha256": "0b7b24211a542555168d0a415ff4f05e6a4a9803045e8e31ffe1984fc3135e91",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/rotation_pitch_so101_v1.stl",
+      "before_sha256": "9be900cc2a2bf718102841ef82ef8d2873842427648092c8ed2ca1e2ef4ffa34",
+      "after_sha256": "9be900cc2a2bf718102841ef82ef8d2873842427648092c8ed2ca1e2ef4ffa34",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/sts3215_03a_no_horn_v1.part",
+      "before_sha256": "fdb32d86e6127a8f7642dd82dac283a0e7d2b45d5df537d003daa642c15e0ffa",
+      "after_sha256": "fdb32d86e6127a8f7642dd82dac283a0e7d2b45d5df537d003daa642c15e0ffa",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/sts3215_03a_no_horn_v1.stl",
+      "before_sha256": "75ef3781b752e4065891aea855e34dc161a38a549549cd0970cedd07eae6f887",
+      "after_sha256": "75ef3781b752e4065891aea855e34dc161a38a549549cd0970cedd07eae6f887",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/sts3215_03a_v1.part",
+      "before_sha256": "82eed501939906901c5bab37f01ba428bcab39856d244f9bd6fe07f441ceb0e0",
+      "after_sha256": "82eed501939906901c5bab37f01ba428bcab39856d244f9bd6fe07f441ceb0e0",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/sts3215_03a_v1.stl",
+      "before_sha256": "a37c871fb502483ab96c256baf457d36f2e97afc9205313d9c5ab275ef941cd0",
+      "after_sha256": "a37c871fb502483ab96c256baf457d36f2e97afc9205313d9c5ab275ef941cd0",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/under_arm_so101_v1.part",
+      "before_sha256": "352adb8567f41a1fa517d0f0e8960749691a1d7079af73f15f1072c838c69709",
+      "after_sha256": "352adb8567f41a1fa517d0f0e8960749691a1d7079af73f15f1072c838c69709",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/under_arm_so101_v1.stl",
+      "before_sha256": "d01d1f2de365651dcad9d6669e94ff87ff7652b5bb2d10752a66a456a86dbc71",
+      "after_sha256": "d01d1f2de365651dcad9d6669e94ff87ff7652b5bb2d10752a66a456a86dbc71",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/upper_arm_so101_v1.part",
+      "before_sha256": "63541673e4b9662974a8b148ea077a9067898a316d8c29aade06b20e22b05cb1",
+      "after_sha256": "63541673e4b9662974a8b148ea077a9067898a316d8c29aade06b20e22b05cb1",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/upper_arm_so101_v1.stl",
+      "before_sha256": "475056e03a17e71919b82fd88ab9a0b898ab50164f2a7943652a6b2941bb2d4f",
+      "after_sha256": "475056e03a17e71919b82fd88ab9a0b898ab50164f2a7943652a6b2941bb2d4f",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2 copy.part",
+      "before_sha256": "af62448feb9fd917f0e6a876e77eb698ef5752ac59385f33a6a1a0107cc471e6",
+      "after_sha256": "af62448feb9fd917f0e6a876e77eb698ef5752ac59385f33a6a1a0107cc471e6",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2 copy.stl",
+      "before_sha256": "5e9ffdd259d37181c752aebfcde6b732823e379135454ff2aee363ce19f4805e",
+      "after_sha256": "5e9ffdd259d37181c752aebfcde6b732823e379135454ff2aee363ce19f4805e",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2.part",
+      "before_sha256": "4a616d2126b70d46a939460ead1bbaf235aa1775672b35dd3e210811e6aa7dfb",
+      "after_sha256": "4a616d2126b70d46a939460ead1bbaf235aa1775672b35dd3e210811e6aa7dfb",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/waveshare_mounting_plate_so101_v2.stl",
+      "before_sha256": "e197e24005a07d01bbc06a8c42311664eaeda415bf859f68fa247884d0f1a6e9",
+      "after_sha256": "e197e24005a07d01bbc06a8c42311664eaeda415bf859f68fa247884d0f1a6e9",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/wrist_roll_follower_so101_v1.part",
+      "before_sha256": "93d674dfca5e566d1b033676f1fc50b4f0cc22e564a82ad7895f3dfd66b68848",
+      "after_sha256": "93d674dfca5e566d1b033676f1fc50b4f0cc22e564a82ad7895f3dfd66b68848",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/wrist_roll_follower_so101_v1.stl",
+      "before_sha256": "4b17b410a12d64ec39554abc3e8054d8a97384b2dc4a8d95a5ecb2a93670f5f4",
+      "after_sha256": "4b17b410a12d64ec39554abc3e8054d8a97384b2dc4a8d95a5ecb2a93670f5f4",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/wrist_roll_pitch_so101_v2.part",
+      "before_sha256": "e9ba6151922dfc8312a54c73ae19224c0b16b863595e0eba86081eaf676ed376",
+      "after_sha256": "e9ba6151922dfc8312a54c73ae19224c0b16b863595e0eba86081eaf676ed376",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/meshes/wrist_roll_pitch_so101_v2.stl",
+      "before_sha256": "6c7ec5525b4d8b9e397a30ab4bb0037156a5d5f38a4adf2c7d943d6c56eda5ae",
+      "after_sha256": "6c7ec5525b4d8b9e397a30ab4bb0037156a5d5f38a4adf2c7d943d6c56eda5ae",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/scene.xml",
+      "before_sha256": "1c8ae7660cfca926f1633bcb953a8628fed0b14c2dee9f16a4a8a464e8913909",
+      "after_sha256": "1c8ae7660cfca926f1633bcb953a8628fed0b14c2dee9f16a4a8a464e8913909",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/so101_mlp_bc_p2p.pt",
+      "before_sha256": "52ff1b07ee51c80d7f43afb50005f5fe82d66d1fd20257bb408864b2ada5c028",
+      "after_sha256": "52ff1b07ee51c80d7f43afb50005f5fe82d66d1fd20257bb408864b2ada5c028",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/so101_new_calib.xml",
+      "before_sha256": "b6dc39ededea3f9dea2064a85b5f1a66b4f7eff72843b82780bc97a4b4efc655",
+      "after_sha256": "b6dc39ededea3f9dea2064a85b5f1a66b4f7eff72843b82780bc97a4b4efc655",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/so101_rnn_bc_p2p.pt",
+      "before_sha256": "203c213155b3fe2b5fde1c4519ddd5904480cb1102edaa866e479d55745f426b",
+      "after_sha256": "203c213155b3fe2b5fde1c4519ddd5904480cb1102edaa866e479d55745f426b",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/transformer_encoder_bc.pt",
+      "before_sha256": "ad026e2377a1a792a8a62891ef1c223e623ef396512238538d2890b9dfdf4c48",
+      "after_sha256": "ad026e2377a1a792a8a62891ef1c223e623ef396512238538d2890b9dfdf4c48",
+      "unchanged": true
+    },
+    {
+      "path": "103_mujoco_bc_to_act/visual_act_final.pt",
+      "before_sha256": "0c299d99bcb7d2356733ef7fb57f9c34f491f276f6b0fd11a7e1ae345e267744",
+      "after_sha256": "0c299d99bcb7d2356733ef7fb57f9c34f491f276f6b0fd11a7e1ae345e267744",
+      "unchanged": true
+    }
+  ],
+  "limits": [
+    "No full-epoch retraining or task success-rate evaluation",
+    "GUI calls mocked in rollout logic tests; EGL collection uses actual rendering",
+    "Existing checkpoints preserved; no v2 checkpoint written",
+    "Online WikiDocs not edited; some source pages only partially retrievable"
+  ]
+}

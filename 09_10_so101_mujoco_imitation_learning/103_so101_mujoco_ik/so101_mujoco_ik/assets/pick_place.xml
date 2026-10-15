@@ -1,0 +1,40 @@
+<mujoco model="so101_synthetic_pick_place">
+  <include file="so101_new_calib.xml"/>
+  <compiler angle="radian" meshdir="meshes" autolimits="true"/>
+  <option timestep="0.002" gravity="0 0 -9.81" integrator="implicitfast"/>
+  <statistic center="0.23 0 0.16" extent="0.55"/>
+  <visual>
+    <global offwidth="640" offheight="480"/>
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.65 0.65 0.65" specular="0.1 0.1 0.1"/>
+  </visual>
+  <asset>
+    <texture name="floor_tex" type="2d" builtin="checker" width="256" height="256"
+             rgb1="0.20 0.22 0.24" rgb2="0.28 0.30 0.32"/>
+    <material name="floor_mat" texture="floor_tex" texrepeat="4 4" texuniform="true"/>
+  </asset>
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="table" type="plane" pos="0 0 0" size="0 0 0.02" material="floor_mat"
+          friction="1.2 0.02 0.001"/>
+    <camera name="overview" pos="0.62 -0.58 0.48" xyaxes="0.70 0.71 0 -0.36 0.35 0.86" fovy="48"/>
+    <body name="red_block" pos="0.25 0.08 0.015">
+      <freejoint name="red_block_joint"/>
+      <geom name="red_block_geom" type="box" size="0.015 0.015 0.015" mass="0.035"
+            rgba="0.9 0.03 0.03 1" friction="1.4 0.03 0.002"/>
+    </body>
+    <site name="place_target" type="cylinder" pos="0.20 -0.16 0.002" size="0.035 0.002"
+          rgba="0.05 0.9 0.15 0.75"/>
+  </worldbody>
+  <sensor>
+    <framepos name="block_position" objtype="body" objname="red_block"/>
+    <framepos name="tcp_position" objtype="site" objname="graspframe"/>
+  </sensor>
+  <contact>
+    <!-- Explicit high-friction fingertip pairs. The block remains a free body:
+         there is no weld/equality or software position override. -->
+    <pair geom1="static_finger_pad" geom2="red_block_geom" condim="4"
+          friction="12.0 0.15 0.005" solref="0.008 1" solimp="0.95 0.99 0.003"/>
+    <pair geom1="moving_finger_pad" geom2="red_block_geom" condim="4"
+          friction="12.0 0.15 0.005" solref="0.008 1" solimp="0.95 0.99 0.003"/>
+  </contact>
+</mujoco>

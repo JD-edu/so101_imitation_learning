@@ -1,0 +1,223 @@
+{
+  "archive": {
+    "id": 439094,
+    "subject": "1~4장 동기화 이전 원문",
+    "book_id": 19620,
+    "parent_id": 439093,
+    "open_yn": "Y"
+  },
+  "map": [
+    {
+      "old_id": 343982,
+      "archive_id": 439095
+    },
+    {
+      "old_id": 432213,
+      "archive_id": 439096
+    },
+    {
+      "old_id": 432216,
+      "archive_id": 439097
+    },
+    {
+      "old_id": 432217,
+      "archive_id": 439098
+    },
+    {
+      "old_id": 432214,
+      "archive_id": 439099
+    },
+    {
+      "old_id": 432215,
+      "archive_id": 439100
+    },
+    {
+      "old_id": 343391,
+      "archive_id": 439101
+    },
+    {
+      "old_id": 343402,
+      "archive_id": 439102
+    },
+    {
+      "old_id": 343403,
+      "archive_id": 439103
+    },
+    {
+      "old_id": 343409,
+      "archive_id": 439104
+    },
+    {
+      "old_id": 343410,
+      "archive_id": 439105
+    },
+    {
+      "old_id": 343411,
+      "archive_id": 439106
+    },
+    {
+      "old_id": 371945,
+      "archive_id": 439107
+    },
+    {
+      "old_id": 371946,
+      "archive_id": 439108
+    },
+    {
+      "old_id": 371947,
+      "archive_id": 439109
+    },
+    {
+      "old_id": 371949,
+      "archive_id": 439110
+    },
+    {
+      "old_id": 371953,
+      "archive_id": 439111
+    },
+    {
+      "old_id": 371967,
+      "archive_id": 439112
+    },
+    {
+      "old_id": 371969,
+      "archive_id": 439113
+    },
+    {
+      "old_id": 372416,
+      "archive_id": 439114
+    },
+    {
+      "old_id": 372025,
+      "archive_id": 439115
+    },
+    {
+      "old_id": 372028,
+      "archive_id": 439116
+    },
+    {
+      "old_id": 372030,
+      "archive_id": 439117
+    },
+    {
+      "old_id": 372089,
+      "archive_id": 439118
+    },
+    {
+      "old_id": 372090,
+      "archive_id": 439119
+    },
+    {
+      "old_id": 439086,
+      "archive_id": 439120
+    }
+  ],
+  "published": [
+    {
+      "id": 343982,
+      "subject": "01장. PyTorch 개론: 로봇 AI 학습 파이프라인의 최소 이해"
+    },
+    {
+      "id": 432213,
+      "subject": "1.1 PyTorch와 Tensor 기초"
+    },
+    {
+      "id": 432216,
+      "subject": "1.2 Tensor 연산과 shape 다루기"
+    },
+    {
+      "id": 432217,
+      "subject": "1.3 자동미분과 PyTorch 학습 파이프라인"
+    },
+    {
+      "id": 432214,
+      "subject": "1.4 회귀에서 로봇 정책 학습까지"
+    },
+    {
+      "id": 432215,
+      "subject": "1.5 실전 점검과 다음 장 연결"
+    },
+    {
+      "id": 343391,
+      "subject": "02장. PyTorch 비전 모델의 학습과 웹캠 추론"
+    },
+    {
+      "id": 343402,
+      "subject": "2.1 MNIST로 시작하는 PyTorch"
+    },
+    {
+      "id": 343403,
+      "subject": "2.2  Pytorch로 CNN 활용하기"
+    },
+    {
+      "id": 343409,
+      "subject": "2.3 Pytorch 사용자 데이터셋으로 확장하기"
+    },
+    {
+      "id": 343410,
+      "subject": "2.4 Pytorch VGGnet 전이학습 활용하기"
+    },
+    {
+      "id": 343411,
+      "subject": "2.5 ResNet으로 파인튜닝까지 적용하기"
+    },
+    {
+      "id": 371945,
+      "subject": "03장. MuJoCo 기초와 로봇 모델 실행"
+    },
+    {
+      "id": 371946,
+      "subject": "3.1 MuJoCo 시작하기와 GLFW 창"
+    },
+    {
+      "id": 371947,
+      "subject": "3.2 MJCF 파일과 모델·상태·물리 시간"
+    },
+    {
+      "id": 371949,
+      "subject": "3.3 MuJoCo viewer로 이륜 로봇 실행하기"
+    },
+    {
+      "id": 371953,
+      "subject": "3.4 GLFW 마우스·키보드 입력"
+    },
+    {
+      "id": 371967,
+      "subject": "3.5 IMU 센서 주소와 자세 표시"
+    },
+    {
+      "id": 371969,
+      "subject": "부록 A. MuJoCo 객체와 센서 진단"
+    },
+    {
+      "id": 372416,
+      "subject": "부록 B. 물리·제어 파라미터와 문제 해결"
+    },
+    {
+      "id": 372025,
+      "subject": "실습 1. Onshape 조립과 모델 제작 범위"
+    },
+    {
+      "id": 372028,
+      "subject": "실습 2. 제공된 URDF를 MJCF로 변환하기"
+    },
+    {
+      "id": 372030,
+      "subject": "실습 3. JDCobot100 모델과 위치 제어"
+    },
+    {
+      "id": 372089,
+      "subject": "실습 4. Puppy 모델과 초기 자세 유지"
+    },
+    {
+      "id": 372090,
+      "subject": "실습 5. SO-101 여섯 관절과 위치 제어"
+    },
+    {
+      "id": 439086,
+      "subject": "04장. RNN과 Transformer: 로봇의 상태 이력 읽기"
+    }
+  ],
+  "status": "complete",
+  "verification": "online_verification.json"
+}

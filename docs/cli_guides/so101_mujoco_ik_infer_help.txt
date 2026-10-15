@@ -1,0 +1,12 @@
+usage: cli.py infer [-h] [--checkpoint CHECKPOINT] [--episodes EPISODES]
+                    [--seed SEED] [--ui] [--device DEVICE]
+                    [--max-steps MAX_STEPS]
+
+options:
+  -h, --help            show this help message and exit
+  --checkpoint CHECKPOINT
+  --episodes EPISODES
+  --seed SEED
+  --ui
+  --device DEVICE
+  --max-steps MAX_STEPS

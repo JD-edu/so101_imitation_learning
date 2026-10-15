@@ -1,0 +1,35 @@
+{
+  "book_id": 19620,
+  "checked_at_utc": "2026-09-29T07:02:10.209Z",
+  "chapters": [
+    {
+      "id": 343542,
+      "subject": "00장 이 책이 만들어지기까지",
+      "children": 0,
+      "content_matches": true
+    },
+    {
+      "id": 343982,
+      "subject": "01장. PyTorch 개론: 로봇 AI 학습 파이프라인의 최소 이해",
+      "children": 0,
+      "content_matches": true
+    },
+    {
+      "id": 343391,
+      "subject": "02장. PyTorch 비전 모델의 학습과 웹캠 추론",
+      "children": 0,
+      "content_matches": true
+    },
+    {
+      "id": 371945,
+      "subject": "03장. MuJoCo 기초와 로봇 모델 실행",
+      "children": 0,
+      "content_matches": true
+    }
+  ],
+  "archived_child_pages": 25,
+  "archive_group_id": 439121,
+  "old_root_copies": 4,
+  "other_pages_preserved": true,
+  "errors": []
+}

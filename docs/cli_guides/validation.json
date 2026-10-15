@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "guides": 10,
+    "script_commands_checked": 57,
+    "cli_commands_parsed": 27,
+    "safe_python_examples_run": 2,
+    "source_files_unchanged": 85
+  },
+  "safe_example_outputs": [
+    {
+      "chapter": 1,
+      "output": "y = 4.0 gradient = 4.0"
+    },
+    {
+      "chapter": 4,
+      "output": "202_RNN_MUJOCO.py (2, 6)\n203_Transformer_MUJOCO.py (2, 6)"
+    }
+  ],
+  "help_processes_passed": 11,
+  "limitations": "학습·수집·실제 모터·GUI 추론은 실행하지 않음. CLI 예제는 실제 parser로 검사함.",
+  "existing_source_data_assets_checked": 888,
+  "datasets_checkpoints_xml_mesh_preserved": true
+}

@@ -1,0 +1,14 @@
+usage: cli.py collect [-h] --dataset-root DATASET_ROOT [--repo-id REPO_ID]
+                      [--leader-port LEADER_PORT] [--calibration CALIBRATION]
+                      [--xml XML] [--fps FPS] [--seed SEED] [--recover-empty]
+
+options:
+  -h, --help            show this help message and exit
+  --dataset-root DATASET_ROOT
+  --repo-id REPO_ID
+  --leader-port LEADER_PORT
+  --calibration CALIBRATION
+  --xml XML
+  --fps FPS
+  --seed SEED
+  --recover-empty

@@ -1,0 +1,13 @@
+usage: cli.py [-h] {demo,generate,train,infer} ...
+
+SO-101 MuJoCo + LeRobot ACT pipeline
+
+positional arguments:
+  {demo,generate,train,infer}
+    demo                run one IK expert demonstration
+    generate            generate a local LeRobot dataset
+    train               train LeRobot ACT
+    infer               run an ACT checkpoint in MuJoCo
+
+options:
+  -h, --help            show this help message and exit

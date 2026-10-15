@@ -1,0 +1,183 @@
+{
+  "book_id": 19620,
+  "before_page_count": 90,
+  "after_page_count": 117,
+  "published_page_count": 26,
+  "archived_original_count": 26,
+  "published_match": true,
+  "archive_originals_match": true,
+  "protected_pages_unchanged": true,
+  "protected_page_count": 63,
+  "draft_errors": [],
+  "archive_errors": [],
+  "protected_errors": [],
+  "archive_map": [
+    {
+      "old_id": 343982,
+      "archive_id": 439095
+    },
+    {
+      "old_id": 432213,
+      "archive_id": 439096
+    },
+    {
+      "old_id": 432216,
+      "archive_id": 439097
+    },
+    {
+      "old_id": 432217,
+      "archive_id": 439098
+    },
+    {
+      "old_id": 432214,
+      "archive_id": 439099
+    },
+    {
+      "old_id": 432215,
+      "archive_id": 439100
+    },
+    {
+      "old_id": 343391,
+      "archive_id": 439101
+    },
+    {
+      "old_id": 343402,
+      "archive_id": 439102
+    },
+    {
+      "old_id": 343403,
+      "archive_id": 439103
+    },
+    {
+      "old_id": 343409,
+      "archive_id": 439104
+    },
+    {
+      "old_id": 343410,
+      "archive_id": 439105
+    },
+    {
+      "old_id": 343411,
+      "archive_id": 439106
+    },
+    {
+      "old_id": 371945,
+      "archive_id": 439107
+    },
+    {
+      "old_id": 371946,
+      "archive_id": 439108
+    },
+    {
+      "old_id": 371947,
+      "archive_id": 439109
+    },
+    {
+      "old_id": 371949,
+      "archive_id": 439110
+    },
+    {
+      "old_id": 371953,
+      "archive_id": 439111
+    },
+    {
+      "old_id": 371967,
+      "archive_id": 439112
+    },
+    {
+      "old_id": 371969,
+      "archive_id": 439113
+    },
+    {
+      "old_id": 372416,
+      "archive_id": 439114
+    },
+    {
+      "old_id": 372025,
+      "archive_id": 439115
+    },
+    {
+      "old_id": 372028,
+      "archive_id": 439116
+    },
+    {
+      "old_id": 372030,
+      "archive_id": 439117
+    },
+    {
+      "old_id": 372089,
+      "archive_id": 439118
+    },
+    {
+      "old_id": 372090,
+      "archive_id": 439119
+    },
+    {
+      "old_id": 439086,
+      "archive_id": 439120
+    }
+  ],
+  "root_toc": [
+    {
+      "id": 343542,
+      "subject": "00장 이 책이 만들어지기까지",
+      "seq": 0
+    },
+    {
+      "id": 343982,
+      "subject": "01장. PyTorch 개론: 로봇 AI 학습 파이프라인의 최소 이해",
+      "seq": 4
+    },
+    {
+      "id": 343391,
+      "subject": "02장. PyTorch 비전 모델의 학습과 웹캠 추론",
+      "seq": 10
+    },
+    {
+      "id": 371945,
+      "subject": "03장. MuJoCo 기초와 로봇 모델 실행",
+      "seq": 16
+    },
+    {
+      "id": 439086,
+      "subject": "04장. RNN과 Transformer: 로봇의 상태 이력 읽기",
+      "seq": 29
+    },
+    {
+      "id": 439087,
+      "subject": "05장. MuJoCo에서 Behavior Cloning, RNN, Transformer 배우기",
+      "seq": 30
+    },
+    {
+      "id": 439088,
+      "subject": "06장. Action Chunking에서 시각 기반 ACT까지",
+      "seq": 31
+    },
+    {
+      "id": 439089,
+      "subject": "07장. 실제 SO-101 모터 제어와 칼리브레이션",
+      "seq": 32
+    },
+    {
+      "id": 439090,
+      "subject": "08장. 실제 SO-101 데이터 수집, MLP·ACT 학습과 추론",
+      "seq": 33
+    },
+    {
+      "id": 439091,
+      "subject": "09장. MuJoCo IK 시연으로 공식 ACT 학습하기",
+      "seq": 34
+    },
+    {
+      "id": 439092,
+      "subject": "10장. 실제 리더와 MuJoCo 팔로워의 이미테이션 러닝",
+      "seq": 35
+    },
+    {
+      "id": 439093,
+      "subject": "이전 원고 보관함 — 개정 이전 자료",
+      "seq": 36
+    }
+  ],
+  "source_github_pushed": false
+}

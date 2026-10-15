@@ -1,0 +1,9 @@
+usage: cli.py infer [-h] --checkpoint CHECKPOINT [--device DEVICE]
+                    [--seed SEED] [--xml XML]
+
+options:
+  -h, --help            show this help message and exit
+  --checkpoint CHECKPOINT
+  --device DEVICE
+  --seed SEED
+  --xml XML

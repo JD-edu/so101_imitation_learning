@@ -1,0 +1,1088 @@
+{
+  "python": "3.10.12",
+  "mujoco": "3.10.0",
+  "python_files": [
+    "102_mujoco_basic/101_mujoco_glfw_window/101_mujoco_glfw_window.py",
+    "102_mujoco_basic/102_mujoco_mjcf_load/102_mujoco_mjcf_load.py",
+    "102_mujoco_basic/103_mujoco_viewer/103_mujoco_viewer.py",
+    "102_mujoco_basic/104_glfw_mouse_move/104_glfw_mouse_move.py",
+    "102_mujoco_basic/105_glfw_asdw_move/105_glfw_asdw_move.py",
+    "102_mujoco_basic/106_mujoco_imu_sensor/106_mujoco_imu_sensor.py",
+    "102_mujoco_basic/107_jdcobot100_MUJOCO_load/answer/mjcf_load.py",
+    "102_mujoco_basic/107_jdcobot100_MUJOCO_load/answer/robot_move.py",
+    "102_mujoco_basic/107_jdcobot100_MUJOCO_load/answer/urdf_to_mjcf.py",
+    "102_mujoco_basic/108_puppypi_mujoco_load/answer/mjcf_load.py",
+    "102_mujoco_basic/108_puppypi_mujoco_load/answer/robot_move.py",
+    "102_mujoco_basic/108_puppypi_mujoco_load/answer/urdf_to_mjcf.py",
+    "102_mujoco_basic/109_so101_mujoco_load/answer/mjcf_load.py",
+    "102_mujoco_basic/109_so101_mujoco_load/answer/robot_move.py",
+    "102_mujoco_basic/109_so101_mujoco_load/answer/urdf_to_mjcf.py"
+  ],
+  "models": [
+    {
+      "path": "102_mujoco_mjcf_load/2wheel_robot.xml",
+      "nq": 9,
+      "nv": 8,
+      "nu": 2,
+      "timestep": 0.002,
+      "sensors": [
+        {
+          "id": 0,
+          "name": "",
+          "adr": 0,
+          "dim": 3
+        }
+      ],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "left-velocity-servo",
+          "gain": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.0,
+            1.0
+          ]
+        },
+        {
+          "id": 1,
+          "name": "right-velocity-servo",
+          "gain": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.0,
+            1.0
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "left-wheel",
+          "qpos_adr": 7,
+          "dof_adr": 6
+        },
+        {
+          "name": "right-wheel",
+          "qpos_adr": 8,
+          "dof_adr": 7
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    },
+    {
+      "path": "103_mujoco_viewer/2wheel_robot.xml",
+      "nq": 9,
+      "nv": 8,
+      "nu": 2,
+      "timestep": 0.002,
+      "sensors": [
+        {
+          "id": 0,
+          "name": "",
+          "adr": 0,
+          "dim": 3
+        }
+      ],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "left-velocity-servo",
+          "gain": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.0,
+            1.0
+          ]
+        },
+        {
+          "id": 1,
+          "name": "right-velocity-servo",
+          "gain": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.0,
+            1.0
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "left-wheel",
+          "qpos_adr": 7,
+          "dof_adr": 6
+        },
+        {
+          "name": "right-wheel",
+          "qpos_adr": 8,
+          "dof_adr": 7
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    },
+    {
+      "path": "104_glfw_mouse_move/scene.xml",
+      "nq": 9,
+      "nv": 8,
+      "nu": 2,
+      "timestep": 0.002,
+      "sensors": [
+        {
+          "id": 0,
+          "name": "",
+          "adr": 0,
+          "dim": 3
+        }
+      ],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "left-velocity-servo",
+          "gain": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.0,
+            1.0
+          ]
+        },
+        {
+          "id": 1,
+          "name": "right-velocity-servo",
+          "gain": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -10.0
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.0,
+            1.0
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "left-wheel",
+          "qpos_adr": 7,
+          "dof_adr": 6
+        },
+        {
+          "name": "right-wheel",
+          "qpos_adr": 8,
+          "dof_adr": 7
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    },
+    {
+      "path": "105_glfw_asdw_move/scene.xml",
+      "nq": 9,
+      "nv": 8,
+      "nu": 2,
+      "timestep": 0.001,
+      "sensors": [
+        {
+          "id": 0,
+          "name": "",
+          "adr": 0,
+          "dim": 3
+        },
+        {
+          "id": 1,
+          "name": "imu_acc",
+          "adr": 3,
+          "dim": 3
+        },
+        {
+          "id": 2,
+          "name": "imu_gyro",
+          "adr": 6,
+          "dim": 3
+        }
+      ],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "left-velocity-servo",
+          "gain": [
+            1.5,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -1.5
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -0.2,
+            0.2
+          ]
+        },
+        {
+          "id": 1,
+          "name": "right-velocity-servo",
+          "gain": [
+            1.5,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -1.5
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -0.2,
+            0.2
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "left-wheel",
+          "qpos_adr": 7,
+          "dof_adr": 6
+        },
+        {
+          "name": "right-wheel",
+          "qpos_adr": 8,
+          "dof_adr": 7
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    },
+    {
+      "path": "106_mujoco_imu_sensor/scene.xml",
+      "nq": 9,
+      "nv": 8,
+      "nu": 2,
+      "timestep": 0.001,
+      "sensors": [
+        {
+          "id": 0,
+          "name": "imu_acc",
+          "adr": 0,
+          "dim": 3
+        },
+        {
+          "id": 1,
+          "name": "imu_gyro",
+          "adr": 3,
+          "dim": 3
+        },
+        {
+          "id": 2,
+          "name": "",
+          "adr": 6,
+          "dim": 3
+        }
+      ],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "left-velocity-servo",
+          "gain": [
+            1.5,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -1.5
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -0.2,
+            0.2
+          ]
+        },
+        {
+          "id": 1,
+          "name": "right-velocity-servo",
+          "gain": [
+            1.5,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            -1.5
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -0.2,
+            0.2
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "left-wheel",
+          "qpos_adr": 7,
+          "dof_adr": 6
+        },
+        {
+          "name": "right-wheel",
+          "qpos_adr": 8,
+          "dof_adr": 7
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    },
+    {
+      "path": "107_jdcobot100_MUJOCO_load/answer/scene.xml",
+      "nq": 4,
+      "nv": 4,
+      "nu": 4,
+      "timestep": 0.002,
+      "sensors": [],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "actuator_base_shoulder",
+          "gain": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -15.0,
+            -0.4
+          ],
+          "ctrl_limited": true,
+          "ctrlrange": [
+            -3.14159,
+            3.14159
+          ],
+          "forcerange": [
+            -0.16,
+            0.16
+          ]
+        },
+        {
+          "id": 1,
+          "name": "actuator_shoulder_arm1",
+          "gain": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -15.0,
+            -0.4
+          ],
+          "ctrl_limited": true,
+          "ctrlrange": [
+            -3.14159,
+            3.14159
+          ],
+          "forcerange": [
+            -0.16,
+            0.16
+          ]
+        },
+        {
+          "id": 2,
+          "name": "actuator_arm1_arm2",
+          "gain": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -15.0,
+            -0.4
+          ],
+          "ctrl_limited": true,
+          "ctrlrange": [
+            -3.14159,
+            3.14159
+          ],
+          "forcerange": [
+            -0.16,
+            0.16
+          ]
+        },
+        {
+          "id": 3,
+          "name": "actuator_arn2_end_arm",
+          "gain": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -15.0,
+            -0.4
+          ],
+          "ctrl_limited": true,
+          "ctrlrange": [
+            -3.14159,
+            3.14159
+          ],
+          "forcerange": [
+            -0.16,
+            0.16
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "base_shoulder",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "shoulder_arm1",
+          "qpos_adr": 1,
+          "dof_adr": 1
+        },
+        {
+          "name": "arm1_arm2",
+          "qpos_adr": 2,
+          "dof_adr": 2
+        },
+        {
+          "name": "arn2_end_arm",
+          "qpos_adr": 3,
+          "dof_adr": 3
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    },
+    {
+      "path": "108_puppypi_mujoco_load/answer/scene.xml",
+      "nq": 15,
+      "nv": 14,
+      "nu": 8,
+      "timestep": 0.002,
+      "sensors": [],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "act_lb_j1",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "id": 1,
+          "name": "act_lb_j2",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "id": 2,
+          "name": "act_rb_j1",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "id": 3,
+          "name": "act_rb_j2",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "id": 4,
+          "name": "act_rf_j1",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "id": 5,
+          "name": "act_rf_j2",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "id": 6,
+          "name": "act_lf_j1",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "id": 7,
+          "name": "act_lf_j2",
+          "gain": [
+            45.0,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -45.0,
+            -1.2
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -1.5,
+            1.5
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "lb_joint1",
+          "qpos_adr": 7,
+          "dof_adr": 6
+        },
+        {
+          "name": "lb_joint2",
+          "qpos_adr": 8,
+          "dof_adr": 7
+        },
+        {
+          "name": "rb_joint1",
+          "qpos_adr": 9,
+          "dof_adr": 8
+        },
+        {
+          "name": "rb_joint2",
+          "qpos_adr": 10,
+          "dof_adr": 9
+        },
+        {
+          "name": "rf_joint1",
+          "qpos_adr": 11,
+          "dof_adr": 10
+        },
+        {
+          "name": "rf_joint2",
+          "qpos_adr": 12,
+          "dof_adr": 11
+        },
+        {
+          "name": "lf_joint1",
+          "qpos_adr": 13,
+          "dof_adr": 12
+        },
+        {
+          "name": "lf_joint2",
+          "qpos_adr": 14,
+          "dof_adr": 13
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    },
+    {
+      "path": "109_so101_mujoco_load/answer/scene.xml",
+      "nq": 6,
+      "nv": 6,
+      "nu": 6,
+      "timestep": 0.002,
+      "sensors": [],
+      "actuators": [
+        {
+          "id": 0,
+          "name": "act_shoulder_pan",
+          "gain": [
+            998.22,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -998.22,
+            -2.731
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -2.94,
+            2.94
+          ]
+        },
+        {
+          "id": 1,
+          "name": "act_shoulder_lift",
+          "gain": [
+            998.22,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -998.22,
+            -2.731
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -2.94,
+            2.94
+          ]
+        },
+        {
+          "id": 2,
+          "name": "act_elbow_flex",
+          "gain": [
+            998.22,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -998.22,
+            -2.731
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -2.94,
+            2.94
+          ]
+        },
+        {
+          "id": 3,
+          "name": "act_wrist_flex",
+          "gain": [
+            998.22,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -998.22,
+            -2.731
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -2.94,
+            2.94
+          ]
+        },
+        {
+          "id": 4,
+          "name": "act_wrist_roll",
+          "gain": [
+            998.22,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -998.22,
+            -2.731
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -2.94,
+            2.94
+          ]
+        },
+        {
+          "id": 5,
+          "name": "act_gripper",
+          "gain": [
+            998.22,
+            0.0,
+            0.0
+          ],
+          "bias": [
+            0.0,
+            -998.22,
+            -2.731
+          ],
+          "ctrl_limited": false,
+          "ctrlrange": [
+            0.0,
+            0.0
+          ],
+          "forcerange": [
+            -2.94,
+            2.94
+          ]
+        }
+      ],
+      "joints": [
+        {
+          "name": "shoulder_pan",
+          "qpos_adr": 0,
+          "dof_adr": 0
+        },
+        {
+          "name": "shoulder_lift",
+          "qpos_adr": 1,
+          "dof_adr": 1
+        },
+        {
+          "name": "elbow_flex",
+          "qpos_adr": 2,
+          "dof_adr": 2
+        },
+        {
+          "name": "wrist_flex",
+          "qpos_adr": 3,
+          "dof_adr": 3
+        },
+        {
+          "name": "wrist_roll",
+          "qpos_adr": 4,
+          "dof_adr": 4
+        },
+        {
+          "name": "gripper",
+          "qpos_adr": 5,
+          "dof_adr": 5
+        }
+      ],
+      "finite_after_100_zero_control_steps": true
+    }
+  ],
+  "urdf_conversions": [
+    {
+      "script": "107_jdcobot100_MUJOCO_load/answer/urdf_to_mjcf.py",
+      "source": "jdcobot100.urdf",
+      "declared_output": "jdcobot200.xml",
+      "compiled": true,
+      "nq": 4,
+      "nu": 0,
+      "saved_xml": true
+    },
+    {
+      "script": "108_puppypi_mujoco_load/answer/urdf_to_mjcf.py",
+      "source": "puppy2.urdf",
+      "declared_output": "puppy2.xml",
+      "compiled": true,
+      "nq": 8,
+      "nu": 0,
+      "saved_xml": true
+    },
+    {
+      "script": "109_so101_mujoco_load/answer/urdf_to_mjcf.py",
+      "source": "so101_new_calib.urdf",
+      "declared_output": "so101.xml",
+      "compiled": true,
+      "nq": 6,
+      "nu": 0,
+      "saved_xml": true
+    }
+  ],
+  "imu_index_reproduction": {
+    "gyro_id": 1,
+    "gyro_adr": 3,
+    "original_slice": [
+      11.0,
+      12.0,
+      13.0
+    ],
+    "correct_slice": [
+      13.0,
+      14.0,
+      15.0
+    ],
+    "synthetic_values": true
+  },
+  "105_glfw_asdw_move_key_controls": {
+    "w": [
+      28.0,
+      40.0
+    ],
+    "s": [
+      -28.0,
+      -40.0
+    ],
+    "a": [
+      -28.0,
+      40.0
+    ],
+    "d": [
+      28.0,
+      -40.0
+    ],
+    "none": [
+      0.0,
+      0.0
+    ]
+  },
+  "106_mujoco_imu_sensor_key_controls": {
+    "w": [
+      28.0,
+      40.0
+    ],
+    "s": [
+      -28.0,
+      -40.0
+    ],
+    "a": [
+      -28.0,
+      40.0
+    ],
+    "d": [
+      28.0,
+      -40.0
+    ],
+    "none": [
+      0.0,
+      0.0
+    ]
+  }
+}

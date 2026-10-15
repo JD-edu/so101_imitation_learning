@@ -1,0 +1,14 @@
+usage: cli.py [-h] {calibrate,collect,inspect,train,infer} ...
+
+Real SO-101 leader + MuJoCo follower + LeRobot ACT
+
+positional arguments:
+  {calibrate,collect,inspect,train,infer}
+    calibrate           calibrate the hardware leader
+    collect             record hardware-leader demonstrations
+    inspect             inspect a recorded episode
+    train               train official LeRobot ACT
+    infer               run a saved ACT policy in MuJoCo
+
+options:
+  -h, --help            show this help message and exit

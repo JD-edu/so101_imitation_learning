@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "so101-mujoco-pipelines"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "mujoco>=3.2,<4",
+  "glfw>=2.7",
+  "numpy>=1.24",
+  "scipy>=1.8",
+  "opencv-python>=4.8",
+  "pyserial>=3.5",
+]
+
+[project.optional-dependencies]
+train = [
+  "torch>=2.2",
+  "torchvision>=0.17",
+  "lerobot>=0.4,<0.5",
+  "transformers>=4.57.1,<5",
+]
+test = ["pytest>=7"]
+
+[project.scripts]
+so101-ik = "so101_mujoco_ik.cli:main"
+so101-real-leader-il = "so101_real_leader_mujoco_il.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["103_so101_mujoco_ik", "104_so101_real_leader_mujoco_il"]
+include = ["so101_mujoco_ik*", "so101_real_leader_mujoco_il*"]
+
+[tool.setuptools.package-data]
+so101_mujoco_ik = ["assets/*.xml", "assets/meshes/*.stl"]
+so101_real_leader_mujoco_il = [
+  "assets/*.xml",
+  "assets/*.json",
+  "assets/*.png",
+  "assets/meshes/*.stl",
+  "assets/calibration_backups/*.json",
+  "aruco_reference/*.md",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

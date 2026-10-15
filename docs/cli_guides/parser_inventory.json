@@ -1,0 +1,474 @@
+{
+  "so101_mujoco_ik": {
+    "demo": [
+      {
+        "flags": [
+          "--seed"
+        ],
+        "dest": "seed",
+        "default": 0,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--headless"
+        ],
+        "dest": "headless",
+        "default": false,
+        "required": false,
+        "type": null,
+        "action": "_StoreTrueAction"
+      }
+    ],
+    "generate": [
+      {
+        "flags": [
+          "--root"
+        ],
+        "dest": "root",
+        "default": "data/so101_pick_place",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--repo-id"
+        ],
+        "dest": "repo_id",
+        "default": "local/so101_mujoco_pick_place",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--episodes"
+        ],
+        "dest": "episodes",
+        "default": 100,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "dest": "seed",
+        "default": 0,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--ui"
+        ],
+        "dest": "ui",
+        "default": false,
+        "required": false,
+        "type": null,
+        "action": "_StoreTrueAction"
+      }
+    ],
+    "train": [
+      {
+        "flags": [
+          "--dataset-root"
+        ],
+        "dest": "dataset_root",
+        "default": "data/so101_pick_place",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--repo-id"
+        ],
+        "dest": "repo_id",
+        "default": "local/so101_mujoco_pick_place",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "dest": "output",
+        "default": "outputs/act_so101",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--steps"
+        ],
+        "dest": "steps",
+        "default": 100000,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "dest": "batch_size",
+        "default": 32,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "dest": "device",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      }
+    ],
+    "infer": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "dest": "checkpoint",
+        "default": "outputs/act_so101",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--episodes"
+        ],
+        "dest": "episodes",
+        "default": 10,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "dest": "seed",
+        "default": 1000,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--ui"
+        ],
+        "dest": "ui",
+        "default": false,
+        "required": false,
+        "type": null,
+        "action": "_StoreTrueAction"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "dest": "device",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--max-steps"
+        ],
+        "dest": "max_steps",
+        "default": 240,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      }
+    ]
+  },
+  "so101_real_leader_mujoco_il": {
+    "calibrate": [
+      {
+        "flags": [
+          "--port"
+        ],
+        "dest": "port",
+        "default": "/dev/ttyUSB0",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--baudrate"
+        ],
+        "dest": "baudrate",
+        "default": 1000000,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--xml"
+        ],
+        "dest": "xml",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "dest": "output",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      }
+    ],
+    "collect": [
+      {
+        "flags": [
+          "--dataset-root"
+        ],
+        "dest": "dataset_root",
+        "default": null,
+        "required": true,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--repo-id"
+        ],
+        "dest": "repo_id",
+        "default": "local/so101_real_leader_mujoco",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--leader-port"
+        ],
+        "dest": "leader_port",
+        "default": "/dev/ttyUSB0",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--calibration"
+        ],
+        "dest": "calibration",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--xml"
+        ],
+        "dest": "xml",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--fps"
+        ],
+        "dest": "fps",
+        "default": 30,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "dest": "seed",
+        "default": 0,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--recover-empty"
+        ],
+        "dest": "recover_empty",
+        "default": false,
+        "required": false,
+        "type": null,
+        "action": "_StoreTrueAction"
+      }
+    ],
+    "inspect": [
+      {
+        "flags": [
+          "--dataset-root"
+        ],
+        "dest": "dataset_root",
+        "default": null,
+        "required": true,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--repo-id"
+        ],
+        "dest": "repo_id",
+        "default": "local/so101_real_leader_mujoco",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--episode"
+        ],
+        "dest": "episode",
+        "default": 0,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--delay-ms"
+        ],
+        "dest": "delay_ms",
+        "default": 33,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      }
+    ],
+    "train": [
+      {
+        "flags": [
+          "--dataset-root"
+        ],
+        "dest": "dataset_root",
+        "default": null,
+        "required": true,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--repo-id"
+        ],
+        "dest": "repo_id",
+        "default": "local/so101_real_leader_mujoco",
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "dest": "output",
+        "default": null,
+        "required": true,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--steps"
+        ],
+        "dest": "steps",
+        "default": 100000,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "dest": "batch_size",
+        "default": 32,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "dest": "device",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      }
+    ],
+    "infer": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "dest": "checkpoint",
+        "default": null,
+        "required": true,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "dest": "device",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "dest": "seed",
+        "default": 1000,
+        "required": false,
+        "type": "int",
+        "action": "_StoreAction"
+      },
+      {
+        "flags": [
+          "--xml"
+        ],
+        "dest": "xml",
+        "default": null,
+        "required": false,
+        "type": null,
+        "action": "_StoreAction"
+      }
+    ]
+  }
+}

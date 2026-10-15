@@ -1,0 +1,10 @@
+usage: cli.py generate [-h] [--root ROOT] [--repo-id REPO_ID]
+                       [--episodes EPISODES] [--seed SEED] [--ui]
+
+options:
+  -h, --help           show this help message and exit
+  --root ROOT
+  --repo-id REPO_ID
+  --episodes EPISODES
+  --seed SEED
+  --ui

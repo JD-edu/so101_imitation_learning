@@ -1,0 +1,9 @@
+usage: cli.py calibrate [-h] [--port PORT] [--baudrate BAUDRATE] [--xml XML]
+                        [--output OUTPUT]
+
+options:
+  -h, --help           show this help message and exit
+  --port PORT
+  --baudrate BAUDRATE
+  --xml XML
+  --output OUTPUT

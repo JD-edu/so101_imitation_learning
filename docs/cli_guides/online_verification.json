@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-09-29T08:00:19.509Z",
+  "book_id": 19620,
+  "published_pages": [
+    {
+      "id": 343982,
+      "subject": "01장. PyTorch 개론: 로봇 AI 학습 파이프라인의 최소 이해"
+    },
+    {
+      "id": 343391,
+      "subject": "02장. PyTorch 비전 모델의 학습과 웹캠 추론"
+    },
+    {
+      "id": 371945,
+      "subject": "03장. MuJoCo 기초와 로봇 모델 실행"
+    },
+    {
+      "id": 439086,
+      "subject": "04장. RNN과 Transformer: 로봇의 상태 이력 읽기"
+    },
+    {
+      "id": 439087,
+      "subject": "05장. MuJoCo에서 Behavior Cloning, RNN, Transformer 배우기"
+    },
+    {
+      "id": 439088,
+      "subject": "06장. Action Chunking에서 시각 기반 ACT까지"
+    },
+    {
+      "id": 439089,
+      "subject": "07장. 실제 SO-101 모터 제어와 칼리브레이션"
+    },
+    {
+      "id": 439090,
+      "subject": "08장. 실제 SO-101 데이터 수집, MLP·ACT 학습과 추론"
+    },
+    {
+      "id": 439091,
+      "subject": "09장. MuJoCo IK 시연으로 공식 ACT 학습하기"
+    },
+    {
+      "id": 439092,
+      "subject": "10장. 실제 리더와 MuJoCo 팔로워의 이미테이션 러닝"
+    }
+  ],
+  "pages_match": true,
+  "each_chapter_single_page": true,
+  "protected_pages_count": 112,
+  "protected_pages_unchanged": true,
+  "errors": []
+}

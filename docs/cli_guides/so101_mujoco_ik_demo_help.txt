@@ -1,0 +1,6 @@
+usage: cli.py demo [-h] [--seed SEED] [--headless]
+
+options:
+  -h, --help   show this help message and exit
+  --seed SEED
+  --headless

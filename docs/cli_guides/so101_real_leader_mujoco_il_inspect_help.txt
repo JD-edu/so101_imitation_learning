@@ -1,0 +1,9 @@
+usage: cli.py inspect [-h] --dataset-root DATASET_ROOT [--repo-id REPO_ID]
+                      [--episode EPISODE] [--delay-ms DELAY_MS]
+
+options:
+  -h, --help            show this help message and exit
+  --dataset-root DATASET_ROOT
+  --repo-id REPO_ID
+  --episode EPISODE
+  --delay-ms DELAY_MS

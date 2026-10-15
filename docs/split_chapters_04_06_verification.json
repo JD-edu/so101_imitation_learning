@@ -1,0 +1,59 @@
+{
+  "original_files_preserved": 60,
+  "copied_assets_verified": 30,
+  "unittest_passed": 21,
+  "cli_checks": [
+    {
+      "args": [],
+      "returncode": 0,
+      "stdout": "VanillaRNN_BC: (2, 10, 6) -> (2, 6)\nTransformerEncoderBC: (2, 10, 6) -> (2, 6)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout": "usage: 101_model_shapes.py [-h] [--batch-size BATCH_SIZE] [--history HISTORY]\n\nCheck the chapter 4 sequence models without training or MuJoCo.\n\noptions:\n  -h, --help            show this help message and exit\n  --batch-size BATCH_SIZE\n  --history HISTORY\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--batch-size",
+        "3",
+        "--history",
+        "12"
+      ],
+      "returncode": 0,
+      "stdout": "VanillaRNN_BC: (3, 12, 6) -> (3, 6)\nTransformerEncoderBC: (3, 12, 6) -> (3, 6)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--history",
+        "0"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: 101_model_shapes.py [-h] [--batch-size BATCH_SIZE] [--history HISTORY]\n101_model_shapes.py: error: argument --history: must be a positive integer\n"
+    }
+  ],
+  "online": {
+    "updated_pages": [
+      343982,
+      343391,
+      371945,
+      439086,
+      439087,
+      439088,
+      439089,
+      439090,
+      439091,
+      439092
+    ],
+    "verified_exact_content": true,
+    "protected_pages_unchanged": 112,
+    "total_pages": 122,
+    "chapters_have_no_children": true
+  }
+}
